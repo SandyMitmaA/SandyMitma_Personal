@@ -2,7 +2,7 @@
   <voice name="es-PE-CamilaNeural">
     <prosody rate="-8%">
       De esta manera podrás interactuar con los diversos reportes disponibles que existen en el <say-as interpret-as="characters">OAS</say-as>.
-      Con esto, ya conoces cómo acceder, navegar, filtrar y exportar reportes en Datamar BI <say-as interpret-as="characters">OAS</say-as>.
+      Con esto, ya conoces cómo acceder, navegar, filtrar y exportar reportes en Datamart BI <say-as interpret-as="characters">OAS</say-as>.
     </prosody>
   </voice>
 </speak>

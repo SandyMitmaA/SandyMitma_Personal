@@ -1,4 +1,4 @@
-# Narración para sintetizar — Datamar BI OAS · GOI
+# Narración para sintetizar — Datamart BI OAS · GOI
 
 **Voz:** `es-PE-CamilaNeural` (Azure Speech · español de Perú, femenina)
 **Formato de salida:** WAV 48 kHz 16-bit mono (o MP3 192 kbps si tu herramienta no da WAV)
@@ -93,7 +93,7 @@ encabezados: son referencia para ti.
 
 ### Escena 11 — Cierre
 
-> De esta manera podrás interactuar con los diversos reportes disponibles que existen en el OAS. Con esto, ya conoces cómo acceder, navegar, filtrar y exportar reportes en Datamar BI OAS.
+> De esta manera podrás interactuar con los diversos reportes disponibles que existen en el OAS. Con esto, ya conoces cómo acceder, navegar, filtrar y exportar reportes en Datamart BI OAS.
 
 ---
 

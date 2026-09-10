@@ -1,7 +1,7 @@
 ---
 format: 1920x1080
 duration: 148s
-message: "Cualquier persona de la GOI puede entrar a Datamar BI, encontrar su reporte, filtrarlo y exportarlo"
+message: "Cualquier persona de la GOI puede entrar a Datamart BI, encontrar su reporte, filtrarlo y exportarlo"
 arc: "Bienvenida → Entrar → Reconocer → Consultar → Filtrar → Exportar → Volver → Cierre"
 audience: "Personal de la Gerencia de Operaciones Internacionales del BCRP"
 mode: autonomous
@@ -14,12 +14,12 @@ mode: autonomous
 - duration: 9s
 - transition_in: cut
 - scene: Título de la capacitación sobre azul institucional a sangre.
-- voiceover: "Bienvenidos a esta capacitación sobre el acceso al Sistema Datamar BI, OAS, de la Gerencia de Operaciones Internacionales."
+- voiceover: "Bienvenidos a esta capacitación sobre el acceso al Sistema Datamart BI, OAS, de la Gerencia de Operaciones Internacionales."
 - poster: 4
 - motion: blueprint `kinetic-type-beats` · reglas `waterfall-entry`, `ambient-glow-bloom`
 
 Fondo `--blue` completo. El título llega en cascada por líneas: «Capacitación» en
-mono pequeño, «Acceso al Sistema Datamar BI – OAS» en Montserrat 900 a 96px, y
+mono pequeño, «Acceso al Sistema Datamart BI – OAS» en Montserrat 900 a 96px, y
 «Gerencia de Operaciones Internacionales» como pie. Espacio reservado arriba para
 el escudo del BCRP. Un halo `--sky` respira detrás del titular. Esta escena y la
 11 son las únicas que rompen la rejilla de dos zonas.
@@ -192,11 +192,11 @@ primero al segundo: la ruta se ve como ruta, no como dos puntos sueltos.
 - duration: 15s
 - transition_in: crossfade
 - scene: Cierre sobre azul institucional con el resumen de las cuatro acciones aprendidas.
-- voiceover: "De esta manera podrás interactuar con los diversos reportes disponibles que existen en el OAS. Con esto, ya conoces cómo acceder, navegar, filtrar y exportar reportes en Datamar BI OAS."
+- voiceover: "De esta manera podrás interactuar con los diversos reportes disponibles que existen en el OAS. Con esto, ya conoces cómo acceder, navegar, filtrar y exportar reportes en Datamart BI OAS."
 - poster: 9
 - motion: blueprint `kinetic-type-beats` · reglas `waterfall-entry`, `ambient-glow-bloom`
 
 Vuelve al fondo `--blue` de la portada para cerrar el paréntesis. Las cuatro
 acciones —acceder, navegar, filtrar, exportar— llegan en cascada como cuatro
-fichas mono, y el titular «Ya puedes navegar Datamar BI» se asienta debajo.
+fichas mono, y el titular «Ya puedes navegar Datamart BI» se asienta debajo.
 Espacio reservado para el escudo y para datos de soporte si el área los entrega.

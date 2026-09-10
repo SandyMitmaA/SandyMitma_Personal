@@ -56,21 +56,15 @@
 
         .crest {
           display: flex;
-          align-items: center;
-          gap: 26px;
-          margin-bottom: 78px;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 24px;
+          margin-bottom: 72px;
         }
-        .crest-mark {
-          width: 76px;
-          height: 76px;
-          border: 3px solid rgba(255, 255, 255, 0.85);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-family: "IBM Plex Mono", monospace;
-          font-weight: 700;
-          font-size: 26px;
-          letter-spacing: 0.04em;
+        .crest-logo {
+          display: block;
+          width: 440px;
+          height: 156px;
         }
         .crest-name {
           font-family: "IBM Plex Mono", monospace;
@@ -133,17 +127,20 @@
 
         <div class="stage">
           <div class="crest" id="p0-crest">
-            <div class="crest-mark">BCRP</div>
-            <div class="crest-name">
-              <div>Banco Central de Reserva del Perú</div>
-              <div>Gerencia de Operaciones Internacionales</div>
-            </div>
+            <img
+              class="crest-logo"
+              src="assets/marca/bcrp-blanco.png"
+              width="440"
+              height="156"
+              alt="Banco Central de Reserva del Perú"
+            />
+            <div class="crest-name">Gerencia de Operaciones Internacionales</div>
           </div>
 
           <div class="eyebrow" id="p0-eyebrow">Capacitación</div>
 
           <div class="title-line" id="p0-t1">Acceso al Sistema</div>
-          <div class="title-line" id="p0-t2">Datamar BI &ndash; OAS</div>
+          <div class="title-line" id="p0-t2">Datamart BI &ndash; OAS</div>
 
           <div class="rule" id="p0-rule"></div>
 

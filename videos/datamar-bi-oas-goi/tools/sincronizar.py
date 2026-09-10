@@ -55,8 +55,8 @@ COREOGRAFIA = {
 # (slug, id de composición, archivo, subtítulos)
 SCENES = [
     ("esc00", "esc00-portada", "compositions/esc00-portada.html", [
-        "Bienvenidos a esta capacitación sobre el acceso al Sistema Datamar BI – OAS,",
-        "de la Gerencia de Operaciones Internacionales.",
+        "Bienvenidos a esta capacitación sobre el acceso al Sistema",
+        "Datamart BI – OAS, de la Gerencia de Operaciones Internacionales.",
     ]),
     ("esc01", "esc01-link", "compositions/esc01-link.html", [
         "Para acceder a la plataforma, debemos ingresar al siguiente link.",
@@ -104,7 +104,7 @@ SCENES = [
     ]),
     ("esc11", "esc11-cierre", "compositions/esc11-cierre.html", [
         "De esta manera podrás interactuar con los diversos reportes disponibles que existen en el OAS.",
-        "Con esto, ya conoces cómo acceder, navegar, filtrar y exportar reportes en Datamar BI OAS.",
+        "Con esto, ya conoces cómo acceder, navegar, filtrar y exportar reportes en Datamart BI OAS.",
     ]),
 ]
 

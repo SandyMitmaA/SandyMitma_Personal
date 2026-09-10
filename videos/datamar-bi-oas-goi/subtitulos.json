@@ -3,15 +3,15 @@
   "subtitulos": [
     {
       "escena": "esc00-portada",
-      "texto": "Bienvenidos a esta capacitación sobre el acceso al Sistema Datamar BI – OAS,",
+      "texto": "Bienvenidos a esta capacitación sobre el acceso al Sistema",
       "inicio": 0.6,
-      "duracion": 5.27
+      "duracion": 3.65
     },
     {
       "escena": "esc00-portada",
-      "texto": "de la Gerencia de Operaciones Internacionales.",
-      "inicio": 5.87,
-      "duracion": 2.43
+      "texto": "Datamart BI – OAS, de la Gerencia de Operaciones Internacionales.",
+      "inicio": 4.25,
+      "duracion": 4.05
     },
     {
       "escena": "esc01-link",
@@ -165,7 +165,7 @@
     },
     {
       "escena": "esc11-cierre",
-      "texto": "Con esto, ya conoces cómo acceder, navegar, filtrar y exportar reportes en Datamar BI OAS.",
+      "texto": "Con esto, ya conoces cómo acceder, navegar, filtrar y exportar reportes en Datamart BI OAS.",
       "inicio": 140.18,
       "duracion": 6.08
     }

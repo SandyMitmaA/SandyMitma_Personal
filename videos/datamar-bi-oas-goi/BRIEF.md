@@ -2,7 +2,7 @@
 workflow: general-video
 flow: automation
 storyboard: no
-message: "Cualquier persona de la GOI puede entrar a Datamar BI, encontrar su reporte, filtrarlo y exportarlo"
+message: "Cualquier persona de la GOI puede entrar a Datamart BI, encontrar su reporte, filtrarlo y exportarlo"
 destination: web
 aspect: 1920x1080
 language: es
@@ -14,7 +14,7 @@ angle: tutorial
 ## Intent
 
 Video de capacitación institucional para el personal de la GOI sobre el acceso al
-Sistema Datamar BI – OAS (Oracle Analytics Server). Recorre el flujo completo de
+Sistema Datamart BI – OAS (Oracle Analytics Server). Recorre el flujo completo de
 un usuario nuevo: entrar por el link, autenticarse, reconocer la página Overview,
 abrir un reporte, usar el panel de filtros, exportar en sus distintos formatos y
 volver al inicio.
@@ -58,9 +58,19 @@ del contenido; este proyecto no inventa pasos ni afirma nada que el guion no dig
 
 ## Notes
 
-- **No hay logo del BCRP.** El guion lo marca como opcional en las escenas 0 y 11.
-  Las portadas se diseñan con un espacio reservado para el escudo; si la usuaria
-  entrega el archivo, entra sin rediseñar la escena.
+- **Logo del BCRP incorporado.** La usuaria entregó `bcrp.png` (600×600, escudo
+  blanco sobre una caja `#25639e`). Como ese azul no coincide con el `--blue` del
+  video, el escudo se extrajo con transparencia — la opacidad de cada píxel sale
+  de su luminancia, para conservar el antialias del monograma, que es de trazo muy
+  fino — y se recortó 6 px hacia dentro para eliminar el borde de la caja, que si
+  no dejaba un marco fantasma. Resultado en `assets/marca/bcrp-blanco.png` (478×170)
+  y su variante en azul institucional para fondos claros. Va en las escenas 0 y 11.
+- **El sistema se llama «Datamart», no «Datamar».** El árbol de OAS en la captura
+  de la escena 10 dice «Datamart GOI». La usuaria corrigió la escena 0 del guion y
+  la corrección se propagó a todos los textos del proyecto: narración, SSML,
+  títulos en pantalla y subtítulos. `GUION-ORIGINAL.md` se deja intacto por ser el
+  documento entregado por el área, y el directorio del proyecto conserva el nombre
+  `datamar-bi-oas-goi` porque renombrarlo rompería rutas e historial sin ganar nada.
 - **La captura de la escena 5 ya trae un recuadro rojo** dibujado sobre el panel
   de filtros. Choca con la paleta azul institucional, así que esa escena enmarca
   la captura de modo que el recuadro rojo quede fuera del encuadre o se apoye en

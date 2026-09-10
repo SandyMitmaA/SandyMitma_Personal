@@ -95,18 +95,19 @@
         .foot {
           display: flex;
           align-items: center;
-          gap: 26px;
+          gap: 40px;
         }
-        .crest-mark {
-          width: 68px;
-          height: 68px;
-          border: 3px solid rgba(255, 255, 255, 0.85);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-family: "IBM Plex Mono", monospace;
-          font-weight: 700;
-          font-size: 24px;
+        .foot-logo {
+          display: block;
+          width: 330px;
+          height: 117px;
+          flex: 0 0 auto;
+        }
+        .foot-rule {
+          width: 3px;
+          height: 96px;
+          background: rgba(255, 255, 255, 0.4);
+          flex: 0 0 auto;
         }
         .foot-name {
           font-family: "IBM Plex Mono", monospace;
@@ -139,15 +140,22 @@
             <div class="chip" id="s11-c4">Exportar</div>
           </div>
 
-          <div class="title" id="s11-title">Ya puedes navegar Datamar BI</div>
+          <div class="title" id="s11-title">Ya puedes navegar Datamart BI</div>
 
           <div class="rule" id="s11-rule"></div>
 
           <div class="foot" id="s11-foot">
-            <div class="crest-mark">BCRP</div>
+            <img
+              class="foot-logo"
+              src="assets/marca/bcrp-blanco.png"
+              width="330"
+              height="117"
+              alt="Banco Central de Reserva del Perú"
+            />
+            <div class="foot-rule"></div>
             <div class="foot-name">
-              <div>Banco Central de Reserva del Perú</div>
-              <div>Gerencia de Operaciones Internacionales</div>
+              <div>Gerencia de Operaciones</div>
+              <div>Internacionales</div>
             </div>
           </div>
         </div>

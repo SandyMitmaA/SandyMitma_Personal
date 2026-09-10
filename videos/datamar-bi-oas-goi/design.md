@@ -1,4 +1,4 @@
-# Design truth — Datamar BI OAS · Capacitación GOI
+# Design truth — Datamart BI OAS · Capacitación GOI
 
 ## Concepto
 
