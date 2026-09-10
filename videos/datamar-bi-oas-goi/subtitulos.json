@@ -161,13 +161,13 @@
       "escena": "esc11-cierre",
       "texto": "De esta manera podrás interactuar con los diversos reportes disponibles que existen en el OAS.",
       "inicio": 158.19,
-      "duracion": 8.73
+      "duracion": 7.71
     },
     {
       "escena": "esc11-cierre",
-      "texto": "Con esto, ya conoces cómo acceder, navegar, filtrar y exportar reportes en Datamar BI OAS.",
-      "inicio": 166.92,
-      "duracion": 8.73
+      "texto": "Con esto, ya conoces cómo acceder, navegar, filtrar y exportar reportes en el Datamart BI OAS de la GOI.",
+      "inicio": 165.9,
+      "duracion": 9.76
     }
   ]
 }

@@ -95,10 +95,10 @@ SCENES = [
     ]),
     ("esc11", "esc11-cierre", "compositions/esc11-cierre.html", [
         "De esta manera podrás interactuar con los diversos reportes disponibles que existen en el OAS.",
-        # ⚠ Sigue el audio grabado, no el texto corregido de NARRACION.md: la
-        # locución dice «Datamar BI OAS». Cuando llegue el esc11.wav nuevo,
-        # cambiar a «…en el Datamart BI OAS de la GOI.»
-        "Con esto, ya conoces cómo acceder, navegar, filtrar y exportar reportes en Datamar BI OAS.",
+        # La usuaria pidió esta redacción a sabiendas de que la locución grabada
+        # todavía dice «Datamar BI OAS»: en la versión sin voz no hay nada que
+        # contradecir, y en la narrada aceptó la diferencia.
+        "Con esto, ya conoces cómo acceder, navegar, filtrar y exportar reportes en el Datamart BI OAS de la GOI.",
     ]),
 ]
 
