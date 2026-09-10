@@ -41,7 +41,8 @@ def ffmpeg(args, **kw):
 
 
 def cadena_base(con_eq=True, paso_alto=80.0, zumbido=None,
-                mud=-2.0, presencia=2.5, umbral_puerta=-45.0):
+                mud=-2.0, presencia=2.5, umbral_puerta=-45.0,
+                espectral=0.0, rango_puerta=-30.0):
     """Los valores por defecto sirven a una locución sintética limpia.
 
     Una grabación humana pide más: un paso alto más arriba y, si hay red
@@ -49,6 +50,12 @@ def cadena_base(con_eq=True, paso_alto=80.0, zumbido=None,
     no supuestos.
     """
     pasos = [f"highpass=f={paso_alto:.0f}:poles=2"]
+    if espectral > 0:
+        # Resta espectral: estima el ruido y lo descuenta banda por banda, así
+        # que también limpia lo que suena DEBAJO de la voz, donde una puerta no
+        # puede llegar. Pasarse produce «ruido musical» —un burbujeo metálico—
+        # así que se queda en una reducción moderada y con seguimiento activo.
+        pasos.append(f"afftdn=nr={espectral:.0f}:nf=-45:tn=1")
     if zumbido:
         # muesca estrecha en la fundamental de red; con el paso alto arriba
         # suele bastar, pero deja el residuo por debajo de lo audible
@@ -59,8 +66,9 @@ def cadena_base(con_eq=True, paso_alto=80.0, zumbido=None,
             f"equalizer=f=2800:t=q:w=1.0:g={presencia}",
         ]
     umbral_lin = 10 ** (umbral_puerta / 20)
+    rango_lin = 10 ** (rango_puerta / 20)
     pasos += [
-        f"agate=threshold={umbral_lin:.5f}:ratio=2:attack=8:release=180:range=0.032",
+        f"agate=threshold={umbral_lin:.5f}:ratio=2:attack=8:release=180:range={rango_lin:.5f}",
         "acompressor=threshold=-18dB:ratio=2:attack=15:release=250:makeup=1",
     ]
     return ",".join(pasos)
@@ -96,6 +104,11 @@ def main():
                     help="dB a sumar en 2.8 kHz")
     ap.add_argument("--umbral-puerta", type=float, default=-45.0, dest="umbral_puerta",
                     help="dB por debajo de los cuales se considera pausa")
+    ap.add_argument("--rango-puerta", type=float, default=-30.0, dest="rango_puerta",
+                    help="dB que baja la puerta en las pausas; más negativo = más silencio")
+    ap.add_argument("--espectral", type=float, default=0.0,
+                    help="dB de resta espectral (afftdn). 10-14 limpia sin artefactos; "
+                         "por encima de 20 empieza a oírse ruido musical")
     a = ap.parse_args()
 
     if not os.path.isfile(a.entrada):
@@ -107,14 +120,17 @@ def main():
 
     base = cadena_base(con_eq=not a.sin_eq, paso_alto=a.paso_alto,
                        zumbido=a.zumbido, mud=a.mud, presencia=a.presencia,
-                       umbral_puerta=a.umbral_puerta)
+                       umbral_puerta=a.umbral_puerta, espectral=a.espectral,
+                       rango_puerta=a.rango_puerta)
     detalle = [f"paso alto {a.paso_alto:.0f} Hz"]
+    if a.espectral > 0:
+        detalle.append(f"resta espectral {a.espectral:.0f} dB")
     if a.zumbido:
         detalle.append(f"muesca {a.zumbido:.0f} Hz")
     if not a.sin_eq:
         detalle.append(f"320 Hz {a.mud:+.1f} dB")
         detalle.append(f"2.8 kHz {a.presencia:+.1f} dB")
-    detalle.append(f"puerta {a.umbral_puerta:.0f} dB")
+    detalle.append(f"puerta {a.umbral_puerta:.0f}/{a.rango_puerta:.0f} dB")
     print("Cadena:   " + " · ".join(detalle))
 
     # --- primera pasada: medir lo que quedará después del proceso ---

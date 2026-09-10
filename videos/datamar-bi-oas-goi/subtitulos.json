@@ -1,173 +1,173 @@
 {
-  "duracion_total": 194.69,
+  "duracion_total": 194.7,
   "subtitulos": [
     {
       "escena": "esc00-portada-solucion",
       "texto": "Bienvenidos a esta capacitación sobre el acceso a la Solución",
       "inicio": 0.6,
-      "duracion": 5.36
+      "duracion": 5.53
     },
     {
       "escena": "esc00-portada-solucion",
       "texto": "Datamart BI – OAS, de la Gerencia de Operaciones Internacionales.",
-      "inicio": 5.96,
-      "duracion": 5.36
+      "inicio": 6.13,
+      "duracion": 5.53
     },
     {
       "escena": "esc01-link",
       "texto": "Para acceder a la plataforma, debemos ingresar al siguiente link.",
-      "inicio": 13.11,
-      "duracion": 7.23
+      "inicio": 13.47,
+      "duracion": 7.04
     },
     {
       "escena": "esc02-login",
       "texto": "En la ventana se mostrará la pantalla de login.",
-      "inicio": 22.14,
-      "duracion": 7.03
+      "inicio": 22.31,
+      "duracion": 7.1
     },
     {
       "escena": "esc02-login",
       "texto": "Aquí deberás ingresar tus credenciales: usuario y contraseña.",
-      "inicio": 29.17,
-      "duracion": 6.25
+      "inicio": 29.41,
+      "duracion": 6.31
     },
     {
       "escena": "esc03-overview",
       "texto": "Esto nos dirigirá a la ventana principal, Overview,",
-      "inicio": 37.22,
-      "duracion": 4.85
+      "inicio": 37.53,
+      "duracion": 4.96
     },
     {
       "escena": "esc03-overview",
       "texto": "donde se muestran los diversos dashboards y reportes disponibles, agrupados por área temática.",
-      "inicio": 42.07,
-      "duracion": 7.89
+      "inicio": 42.49,
+      "duracion": 8.05
     },
     {
       "escena": "esc03-overview",
       "texto": "Por ejemplo: Portafolio y Contrapartes, o Indicadores de Desempeño, entre otros.",
-      "inicio": 49.96,
-      "duracion": 6.68
+      "inicio": 50.54,
+      "duracion": 6.81
     },
     {
       "escena": "esc04-abrir-reporte",
       "texto": "Si se requiere consultar alguno de estos reportes, solo es necesario dar clic para acceder.",
-      "inicio": 58.44,
-      "duracion": 9.77
+      "inicio": 59.15,
+      "duracion": 9.35
     },
     {
       "escena": "esc04-abrir-reporte",
       "texto": "Por ejemplo, el reporte de Portafolio vs Referencia.",
-      "inicio": 68.21,
-      "duracion": 5.21
+      "inicio": 68.5,
+      "duracion": 4.98
     },
     {
       "escena": "esc05-filtros",
       "texto": "Aquí se mostrará el reporte.",
-      "inicio": 75.22,
-      "duracion": 2.48
+      "inicio": 75.28,
+      "duracion": 2.6
     },
     {
       "escena": "esc05-filtros",
       "texto": "En la parte lateral izquierda encontramos un panel con los filtros disponibles:",
-      "inicio": 77.7,
-      "duracion": 5.95
+      "inicio": 77.88,
+      "duracion": 6.23
     },
     {
       "escena": "esc05-filtros",
       "texto": "frecuencia, ya sea diaria, mensual o anual;",
-      "inicio": 83.65,
-      "duracion": 3.47
+      "inicio": 84.11,
+      "duracion": 3.63
     },
     {
       "escena": "esc05-filtros",
       "texto": "fecha o rango de fecha; moneda; instrumento;",
-      "inicio": 87.13,
-      "duracion": 3.47
+      "inicio": 87.74,
+      "duracion": 3.63
     },
     {
       "escena": "esc05-filtros",
       "texto": "metodología de consulta;",
-      "inicio": 90.6,
-      "duracion": 1.49
+      "inicio": 91.37,
+      "duracion": 1.56
     },
     {
       "escena": "esc05-filtros",
       "texto": "y si se desea ver el reporte a nivel de tramo o moneda.",
-      "inicio": 92.09,
-      "duracion": 6.45
+      "inicio": 92.93,
+      "duracion": 6.75
     },
     {
       "escena": "esc05-filtros",
       "texto": "Finalmente, se debe presionar Aplicar.",
-      "inicio": 98.54,
-      "duracion": 2.48
+      "inicio": 99.68,
+      "duracion": 2.6
     },
     {
       "escena": "esc06-exportar",
       "texto": "Para exportar los resultados, en la parte inferior se mostrará la opción de exportar.",
-      "inicio": 102.82,
-      "duracion": 9.22
+      "inicio": 104.08,
+      "duracion": 8.61
     },
     {
       "escena": "esc07-con-formato",
       "texto": "Al hacer clic se mostrarán los distintos formatos disponibles.",
-      "inicio": 113.84,
-      "duracion": 6.3
+      "inicio": 114.49,
+      "duracion": 6.07
     },
     {
       "escena": "esc07-con-formato",
       "texto": "Con la opción Con Formato, se puede exportar en PDF, Excel, PowerPoint o archivo web.",
-      "inicio": 120.14,
-      "duracion": 10.5
+      "inicio": 120.56,
+      "duracion": 10.11
     },
     {
       "escena": "esc08-datos",
       "texto": "Con la otra opción, Datos, se podrá exportar en formatos Excel, CSV,",
-      "inicio": 132.44,
+      "inicio": 132.47,
       "duracion": 9.03
     },
     {
       "escena": "esc08-datos",
       "texto": "delimitado por tabulaciones, y XML.",
-      "inicio": 141.47,
+      "inicio": 141.5,
       "duracion": 3.76
     },
     {
       "escena": "esc09-superior-derecha",
       "texto": "Otra manera de exportar es dando clic en la parte superior derecha,",
-      "inicio": 147.03,
-      "duracion": 6.42
+      "inicio": 147.06,
+      "duracion": 6.67
     },
     {
       "escena": "esc09-superior-derecha",
       "texto": "en Exportar a Excel, o en Exportar Página Actual.",
-      "inicio": 153.45,
-      "duracion": 4.82
+      "inicio": 153.73,
+      "duracion": 5.0
     },
     {
       "escena": "esc10-regresar",
       "texto": "Si se requiere regresar a la página principal,",
-      "inicio": 160.07,
-      "duracion": 4.45
+      "inicio": 160.54,
+      "duracion": 4.26
     },
     {
       "escena": "esc10-regresar",
       "texto": "nos dirigimos a Panel de Control y hacemos clic en Overview.",
-      "inicio": 164.52,
-      "duracion": 6.11
+      "inicio": 164.8,
+      "duracion": 5.86
     },
     {
       "escena": "esc11-cierre",
       "texto": "De esta manera podrás interactuar con los diversos reportes disponibles que existen en el OAS.",
-      "inicio": 172.43,
-      "duracion": 9.29
+      "inicio": 172.46,
+      "duracion": 9.28
     },
     {
       "escena": "esc11-cierre",
       "texto": "Con esto, ya conoces cómo acceder, navegar, filtrar y exportar reportes en el Datamart BI OAS de la GOI.",
-      "inicio": 181.72,
-      "duracion": 11.77
+      "inicio": 181.74,
+      "duracion": 11.76
     }
   ]
 }

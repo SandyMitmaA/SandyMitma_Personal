@@ -142,7 +142,7 @@
         data-composition-id="esc05-filtros"
         data-width="1920"
         data-height="1080"
-        data-duration="27.6"
+        data-duration="28.8"
       >
         <div class="bg-mesh" id="esc05-filtros-mesh"></div>
         <div class="bg-glow" id="esc05-filtros-glow"></div>
@@ -179,8 +179,8 @@
       <script>
         (function () {
           const tl = gsap.timeline({ paused: true });
-          tl.fromTo("#esc05-filtros-mesh", { y: 0 }, { y: 40, duration: 27.6, ease: "none" }, 0);
-          tl.fromTo("#esc05-filtros-glow", { scale: 0.94, opacity: 0.78 }, { scale: 1.06, opacity: 1, duration: 13.8, ease: "sine.inOut", yoyo: true, repeat: 1 }, 0);
+          tl.fromTo("#esc05-filtros-mesh", { y: 0 }, { y: 40, duration: 28.8, ease: "none" }, 0);
+          tl.fromTo("#esc05-filtros-glow", { scale: 0.94, opacity: 0.78 }, { scale: 1.06, opacity: 1, duration: 14.4, ease: "sine.inOut", yoyo: true, repeat: 1 }, 0);
           tl.fromTo("#esc05-filtros-topbar", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power3.out" }, 0);
           tl.fromTo("#esc05-filtros-divider", { scaleY: 0 }, { scaleY: 1, duration: 0.6, ease: "power2.out" }, 0.2);
 
@@ -195,38 +195,38 @@
 
           /* cámara — coordinate-target-zoom */
           tl.set("#esc05-filtros-zoom", { scale: 1.06, x: 0.5, y: -0.2 }, 0);
-          tl.to("#esc05-filtros-zoom", { scale: 1.42, x: 0.0, y: -79.4, duration: 1.66, ease: "power2.inOut" }, 3.53);
+          tl.to("#esc05-filtros-zoom", { scale: 1.42, x: 0.0, y: -79.4, duration: 1.73, ease: "power2.inOut" }, 3.69);
 
           /* reflector — un solo foco que recorre la pantalla */
           tl.set("#esc05-filtros-spot", { x: 46, y: 158, scaleX: 1, scaleY: 1 }, 0);
-          tl.fromTo("#esc05-filtros-spot", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.5, ease: "power2.out" }, 5.52);
-          tl.to("#esc05-filtros-spot", { x: 40, y: 244, scaleX: 1.2, scaleY: 0.5366, duration: 0.55, ease: "power2.inOut" }, 9.05);
-          tl.to("#esc05-filtros-spot", { x: 40, y: 294, scaleX: 1.04, scaleY: 0.4878, duration: 0.55, ease: "power2.inOut" }, 12.14);
-          tl.to("#esc05-filtros-spot", { x: 40, y: 344, scaleX: 1.04, scaleY: 0.4878, duration: 0.55, ease: "power2.inOut" }, 14.35);
-          tl.to("#esc05-filtros-spot", { x: 40, y: 394, scaleX: 1.04, scaleY: 0.4878, duration: 0.55, ease: "power2.inOut" }, 16.56);
-          tl.to("#esc05-filtros-spot", { x: 40, y: 442, scaleX: 1.04, scaleY: 0.4878, duration: 0.55, ease: "power2.inOut" }, 19.21);
-          tl.to("#esc05-filtros-spot", { x: 154, y: 486, scaleX: 0.32, scaleY: 0.3659, duration: 0.55, ease: "power2.inOut" }, 22.3);
-          tl.to("#esc05-filtros-spot", { autoAlpha: 0, duration: 0.45, ease: "power2.in" }, 27.1);
-          tl.fromTo("#esc05-filtros-cue0", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 4.619999999999999);
-          tl.to("#esc05-filtros-cue0", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 5.52);
-          tl.to("#esc05-filtros-cue0", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 9.05);
-          tl.fromTo("#esc05-filtros-cue1", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 8.15);
-          tl.to("#esc05-filtros-cue1", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 9.05);
-          tl.to("#esc05-filtros-cue1", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 12.14);
-          tl.fromTo("#esc05-filtros-cue2", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 11.24);
-          tl.to("#esc05-filtros-cue2", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 12.14);
-          tl.to("#esc05-filtros-cue2", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 14.35);
-          tl.fromTo("#esc05-filtros-cue3", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 13.45);
-          tl.to("#esc05-filtros-cue3", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 14.35);
-          tl.to("#esc05-filtros-cue3", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 16.56);
-          tl.fromTo("#esc05-filtros-cue4", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 15.659999999999998);
-          tl.to("#esc05-filtros-cue4", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 16.56);
-          tl.to("#esc05-filtros-cue4", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 19.21);
-          tl.fromTo("#esc05-filtros-cue5", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 18.310000000000002);
-          tl.to("#esc05-filtros-cue5", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 19.21);
-          tl.to("#esc05-filtros-cue5", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 22.3);
-          tl.fromTo("#esc05-filtros-cue6", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 21.400000000000002);
-          tl.to("#esc05-filtros-cue6", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 22.3);
+          tl.fromTo("#esc05-filtros-spot", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.5, ease: "power2.out" }, 5.76);
+          tl.to("#esc05-filtros-spot", { x: 40, y: 244, scaleX: 1.2, scaleY: 0.5366, duration: 0.55, ease: "power2.inOut" }, 9.45);
+          tl.to("#esc05-filtros-spot", { x: 40, y: 294, scaleX: 1.04, scaleY: 0.4878, duration: 0.55, ease: "power2.inOut" }, 12.67);
+          tl.to("#esc05-filtros-spot", { x: 40, y: 344, scaleX: 1.04, scaleY: 0.4878, duration: 0.55, ease: "power2.inOut" }, 14.98);
+          tl.to("#esc05-filtros-spot", { x: 40, y: 394, scaleX: 1.04, scaleY: 0.4878, duration: 0.55, ease: "power2.inOut" }, 17.28);
+          tl.to("#esc05-filtros-spot", { x: 40, y: 442, scaleX: 1.04, scaleY: 0.4878, duration: 0.55, ease: "power2.inOut" }, 20.04);
+          tl.to("#esc05-filtros-spot", { x: 154, y: 486, scaleX: 0.32, scaleY: 0.3659, duration: 0.55, ease: "power2.inOut" }, 23.27);
+          tl.to("#esc05-filtros-spot", { autoAlpha: 0, duration: 0.45, ease: "power2.in" }, 28.3);
+          tl.fromTo("#esc05-filtros-cue0", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 4.859999999999999);
+          tl.to("#esc05-filtros-cue0", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 5.76);
+          tl.to("#esc05-filtros-cue0", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 9.45);
+          tl.fromTo("#esc05-filtros-cue1", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 8.549999999999999);
+          tl.to("#esc05-filtros-cue1", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 9.45);
+          tl.to("#esc05-filtros-cue1", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 12.67);
+          tl.fromTo("#esc05-filtros-cue2", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 11.77);
+          tl.to("#esc05-filtros-cue2", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 12.67);
+          tl.to("#esc05-filtros-cue2", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 14.98);
+          tl.fromTo("#esc05-filtros-cue3", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 14.08);
+          tl.to("#esc05-filtros-cue3", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 14.98);
+          tl.to("#esc05-filtros-cue3", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 17.28);
+          tl.fromTo("#esc05-filtros-cue4", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 16.380000000000003);
+          tl.to("#esc05-filtros-cue4", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 17.28);
+          tl.to("#esc05-filtros-cue4", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 20.04);
+          tl.fromTo("#esc05-filtros-cue5", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 19.14);
+          tl.to("#esc05-filtros-cue5", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 20.04);
+          tl.to("#esc05-filtros-cue5", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 23.27);
+          tl.fromTo("#esc05-filtros-cue6", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 22.37);
+          tl.to("#esc05-filtros-cue6", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 23.27);
 
           window.__timelines["esc05-filtros"] = tl;
         })();
