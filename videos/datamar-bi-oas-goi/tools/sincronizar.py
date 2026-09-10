@@ -38,18 +38,9 @@ FFMPEG = "/opt/pw-browsers/ffmpeg-1011/ffmpeg-linux"
 # Duración para la que está coreografiado el interior de cada escena.
 # Es un piso: acortar por debajo truncaría resaltados y movimientos de cámara.
 COREOGRAFIA = {
-    "esc00": 9,
-    "esc01": 7,
-    "esc02": 10,
-    "esc03": 16,
-    "esc04": 12,
-    "esc05": 25,
-    "esc06": 8,
-    "esc07": 13,
-    "esc08": 10,
-    "esc09": 12,
-    "esc10": 11,
-    "esc11": 15,
+    "esc00": 9, "esc01": 7, "esc02": 10, "esc03": 16,
+    "esc04": 12, "esc05": 25, "esc06": 8, "esc07": 13,
+    "esc08": 10, "esc09": 12, "esc10": 11, "esc11": 15,
 }
 
 # (slug, id de composición, archivo, subtítulos)

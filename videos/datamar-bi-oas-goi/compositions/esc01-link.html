@@ -168,7 +168,7 @@
         data-composition-id="esc01-link"
         data-width="1920"
         data-height="1080"
-        data-duration="7"
+        data-duration="7.9"
       >
         <div class="bg-mesh" id="s1-mesh"></div>
         <div class="bg-glow" id="s1-glow"></div>
@@ -206,11 +206,11 @@
         (function () {
           const tl = gsap.timeline({ paused: true });
 
-          tl.fromTo("#s1-mesh", { y: 0 }, { y: 40, duration: 7, ease: "none" }, 0);
+          tl.fromTo("#s1-mesh", { y: 0 }, { y: 40, duration: 7.9, ease: "none" }, 0);
           tl.fromTo(
             "#s1-glow",
             { scale: 0.94, opacity: 0.8 },
-            { scale: 1.05, opacity: 1, duration: 3.5, ease: "sine.inOut", yoyo: true, repeat: 1 },
+            { scale: 1.05, opacity: 1, duration: 3.95, ease: "sine.inOut", yoyo: true, repeat: 1 },
             0
           );
 

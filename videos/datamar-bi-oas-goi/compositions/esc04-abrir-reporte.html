@@ -169,7 +169,7 @@
         data-composition-id="esc04-abrir-reporte"
         data-width="1920"
         data-height="1080"
-        data-duration="12"
+        data-duration="14.4"
       >
         <div class="bg-mesh" id="s4-mesh"></div>
         <div class="bg-glow" id="s4-glow"></div>
@@ -225,11 +225,11 @@
 
           const tl = gsap.timeline({ paused: true });
 
-          tl.fromTo("#s4-mesh", { y: 0 }, { y: 40, duration: 12, ease: "none" }, 0);
+          tl.fromTo("#s4-mesh", { y: 0 }, { y: 40, duration: 14.4, ease: "none" }, 0);
           tl.fromTo(
             "#s4-glow",
             { scale: 0.94, opacity: 0.78 },
-            { scale: 1.06, opacity: 1, duration: 6, ease: "sine.inOut", yoyo: true, repeat: 1 },
+            { scale: 1.06, opacity: 1, duration: 7.2, ease: "sine.inOut", yoyo: true, repeat: 1 },
             0
           );
           tl.fromTo("#s4-topbar", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power3.out" }, 0);
@@ -253,33 +253,33 @@
           /* --- cursor-click-ripple --- */
           /* entra desde fuera del encuadre, viaja al enlace marcado y se hunde */
           tl.set("#s4-cursor", { "--hf-cursor-x": "1160px", "--hf-cursor-y": "540px" }, 0);
-          tl.fromTo("#s4-cursor", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 1.9);
+          tl.fromTo("#s4-cursor", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 2.28);
           tl.to(
             "#s4-cursor",
-            { "--hf-cursor-x": "112px", "--hf-cursor-y": "212px", duration: 1.65, ease: "power2.inOut" },
-            2.1
+            { "--hf-cursor-x": "112px", "--hf-cursor-y": "212px", duration: 1.98, ease: "power2.inOut" },
+            2.52
           );
 
           /* physics-press-reaction: compresión y recuperación */
           /* la compresión va en el SVG interno: el elemento externo conserva
              su transform de posición, que se anima por variables CSS */
-          tl.to("#s4-cursor-svg", { scale: 0.86, duration: 0.1, ease: "power2.in" }, 4.05);
-          tl.to("#s4-cursor-svg", { scale: 1, duration: 0.24, ease: "back.out(3)" }, 4.15);
+          tl.to("#s4-cursor-svg", { scale: 0.86, duration: 0.1, ease: "power2.in" }, 4.86);
+          tl.to("#s4-cursor-svg", { scale: 1, duration: 0.24, ease: "back.out(3)" }, 4.98);
           tl.fromTo(
             "#s4-pulse",
             { opacity: 0.85, scale: 0.2 },
             { opacity: 0, scale: 2.6, duration: 0.55, ease: "power2.out" },
-            4.08
+            4.9
           );
 
           /* el reflector se enciende justo en el impacto */
           tl.set("#s4-spot", { x: 0, y: 205 }, 0);
-          tl.fromTo("#s4-spot", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.45, ease: "power2.out" }, 4.1);
-          tl.fromTo("#s4-cue", { autoAlpha: 0, x: -20 }, { autoAlpha: 1, x: 0, duration: 0.4, ease: "power2.out" }, 4.2);
+          tl.fromTo("#s4-spot", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.45, ease: "power2.out" }, 4.92);
+          tl.fromTo("#s4-cue", { autoAlpha: 0, x: -20 }, { autoAlpha: 1, x: 0, duration: 0.4, ease: "power2.out" }, 5.04);
 
           /* el cursor se retira para dejar leer el resultado */
-          tl.to("#s4-cursor", { autoAlpha: 0, duration: 0.4, ease: "power2.in" }, 6.4);
-          tl.to("#s4-spot", { autoAlpha: 0, duration: 0.45, ease: "power2.in" }, 11.3);
+          tl.to("#s4-cursor", { autoAlpha: 0, duration: 0.4, ease: "power2.in" }, 7.68);
+          tl.to("#s4-spot", { autoAlpha: 0, duration: 0.45, ease: "power2.in" }, 13.9);
 
           window.__timelines["esc04-abrir-reporte"] = tl;
         })();

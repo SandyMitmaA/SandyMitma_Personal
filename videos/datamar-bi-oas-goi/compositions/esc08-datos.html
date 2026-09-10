@@ -142,7 +142,7 @@
         data-composition-id="esc08-datos"
         data-width="1920"
         data-height="1080"
-        data-duration="10"
+        data-duration="12.43"
       >
         <div class="bg-mesh" id="esc08-datos-mesh"></div>
         <div class="bg-glow" id="esc08-datos-glow"></div>
@@ -177,8 +177,8 @@
       <script>
         (function () {
           const tl = gsap.timeline({ paused: true });
-          tl.fromTo("#esc08-datos-mesh", { y: 0 }, { y: 40, duration: 10, ease: "none" }, 0);
-          tl.fromTo("#esc08-datos-glow", { scale: 0.94, opacity: 0.78 }, { scale: 1.06, opacity: 1, duration: 5.0, ease: "sine.inOut", yoyo: true, repeat: 1 }, 0);
+          tl.fromTo("#esc08-datos-mesh", { y: 0 }, { y: 40, duration: 12.43, ease: "none" }, 0);
+          tl.fromTo("#esc08-datos-glow", { scale: 0.94, opacity: 0.78 }, { scale: 1.06, opacity: 1, duration: 6.21, ease: "sine.inOut", yoyo: true, repeat: 1 }, 0);
           tl.fromTo("#esc08-datos-topbar", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power3.out" }, 0);
           tl.fromTo("#esc08-datos-divider", { scaleY: 0 }, { scaleY: 1, duration: 0.6, ease: "power2.out" }, 0.2);
 
@@ -196,26 +196,26 @@
 
           /* reflector — un solo foco que recorre la pantalla */
           tl.set("#esc08-datos-spot", { x: 5, y: 85, scaleX: 1, scaleY: 1 }, 0);
-          tl.fromTo("#esc08-datos-spot", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.5, ease: "power2.out" }, 1.6);
-          tl.to("#esc08-datos-spot", { x: 152, y: 6, scaleX: 1.5603, scaleY: 0.6316, duration: 0.55, ease: "power2.inOut" }, 4.0);
-          tl.to("#esc08-datos-spot", { x: 152, y: 32, scaleX: 1.5603, scaleY: 0.6316, duration: 0.55, ease: "power2.inOut" }, 5.2);
-          tl.to("#esc08-datos-spot", { x: 152, y: 58, scaleX: 1.5603, scaleY: 0.6316, duration: 0.55, ease: "power2.inOut" }, 6.4);
-          tl.to("#esc08-datos-spot", { x: 152, y: 82, scaleX: 1.5603, scaleY: 0.6316, duration: 0.55, ease: "power2.inOut" }, 7.8);
-          tl.to("#esc08-datos-spot", { autoAlpha: 0, duration: 0.45, ease: "power2.in" }, 9.5);
-          tl.fromTo("#esc08-datos-cue0", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 0.9);
-          tl.to("#esc08-datos-cue0", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 1.6);
-          tl.to("#esc08-datos-cue0", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 4.0);
-          tl.fromTo("#esc08-datos-cue1", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 3.1);
-          tl.to("#esc08-datos-cue1", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 4.0);
-          tl.to("#esc08-datos-cue1", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 5.2);
-          tl.fromTo("#esc08-datos-cue2", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 4.3);
-          tl.to("#esc08-datos-cue2", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 5.2);
-          tl.to("#esc08-datos-cue2", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 6.4);
-          tl.fromTo("#esc08-datos-cue3", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 5.5);
-          tl.to("#esc08-datos-cue3", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 6.4);
-          tl.to("#esc08-datos-cue3", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 7.8);
-          tl.fromTo("#esc08-datos-cue4", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 6.8999999999999995);
-          tl.to("#esc08-datos-cue4", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 7.8);
+          tl.fromTo("#esc08-datos-spot", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.5, ease: "power2.out" }, 1.99);
+          tl.to("#esc08-datos-spot", { x: 152, y: 6, scaleX: 1.5603, scaleY: 0.6316, duration: 0.55, ease: "power2.inOut" }, 4.97);
+          tl.to("#esc08-datos-spot", { x: 152, y: 32, scaleX: 1.5603, scaleY: 0.6316, duration: 0.55, ease: "power2.inOut" }, 6.46);
+          tl.to("#esc08-datos-spot", { x: 152, y: 58, scaleX: 1.5603, scaleY: 0.6316, duration: 0.55, ease: "power2.inOut" }, 7.96);
+          tl.to("#esc08-datos-spot", { x: 152, y: 82, scaleX: 1.5603, scaleY: 0.6316, duration: 0.55, ease: "power2.inOut" }, 9.7);
+          tl.to("#esc08-datos-spot", { autoAlpha: 0, duration: 0.45, ease: "power2.in" }, 11.93);
+          tl.fromTo("#esc08-datos-cue0", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 1.0899999999999999);
+          tl.to("#esc08-datos-cue0", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 1.99);
+          tl.to("#esc08-datos-cue0", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 4.97);
+          tl.fromTo("#esc08-datos-cue1", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 4.069999999999999);
+          tl.to("#esc08-datos-cue1", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 4.97);
+          tl.to("#esc08-datos-cue1", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 6.46);
+          tl.fromTo("#esc08-datos-cue2", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 5.56);
+          tl.to("#esc08-datos-cue2", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 6.46);
+          tl.to("#esc08-datos-cue2", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 7.96);
+          tl.fromTo("#esc08-datos-cue3", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 7.06);
+          tl.to("#esc08-datos-cue3", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 7.96);
+          tl.to("#esc08-datos-cue3", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 9.7);
+          tl.fromTo("#esc08-datos-cue4", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 8.799999999999999);
+          tl.to("#esc08-datos-cue4", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 9.7);
 
           window.__timelines["esc08-datos"] = tl;
         })();

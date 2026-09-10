@@ -142,7 +142,7 @@
         data-composition-id="esc02-login"
         data-width="1920"
         data-height="1080"
-        data-duration="10"
+        data-duration="12.62"
       >
         <div class="bg-mesh" id="esc02-login-mesh"></div>
         <div class="bg-glow" id="esc02-login-glow"></div>
@@ -175,8 +175,8 @@
       <script>
         (function () {
           const tl = gsap.timeline({ paused: true });
-          tl.fromTo("#esc02-login-mesh", { y: 0 }, { y: 40, duration: 10, ease: "none" }, 0);
-          tl.fromTo("#esc02-login-glow", { scale: 0.94, opacity: 0.78 }, { scale: 1.06, opacity: 1, duration: 5.0, ease: "sine.inOut", yoyo: true, repeat: 1 }, 0);
+          tl.fromTo("#esc02-login-mesh", { y: 0 }, { y: 40, duration: 12.62, ease: "none" }, 0);
+          tl.fromTo("#esc02-login-glow", { scale: 0.94, opacity: 0.78 }, { scale: 1.06, opacity: 1, duration: 6.31, ease: "sine.inOut", yoyo: true, repeat: 1 }, 0);
           tl.fromTo("#esc02-login-topbar", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power3.out" }, 0);
           tl.fromTo("#esc02-login-divider", { scaleY: 0 }, { scaleY: 1, duration: 0.6, ease: "power2.out" }, 0.2);
 
@@ -194,18 +194,18 @@
 
           /* reflector — un solo foco que recorre la pantalla */
           tl.set("#esc02-login-spot", { x: 120, y: 196, scaleX: 1, scaleY: 1 }, 0);
-          tl.fromTo("#esc02-login-spot", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.5, ease: "power2.out" }, 2.6);
-          tl.to("#esc02-login-spot", { x: 120, y: 258, scaleX: 1.0, scaleY: 1.0, duration: 0.55, ease: "power2.inOut" }, 4.6);
-          tl.to("#esc02-login-spot", { x: 120, y: 358, scaleX: 1.0, scaleY: 1.0, duration: 0.55, ease: "power2.inOut" }, 6.6);
-          tl.to("#esc02-login-spot", { autoAlpha: 0, duration: 0.45, ease: "power2.in" }, 9.5);
-          tl.fromTo("#esc02-login-cue0", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 1.7000000000000002);
-          tl.to("#esc02-login-cue0", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 2.6);
-          tl.to("#esc02-login-cue0", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 4.6);
-          tl.fromTo("#esc02-login-cue1", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 3.6999999999999997);
-          tl.to("#esc02-login-cue1", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 4.6);
-          tl.to("#esc02-login-cue1", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 6.6);
-          tl.fromTo("#esc02-login-cue2", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 5.699999999999999);
-          tl.to("#esc02-login-cue2", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 6.6);
+          tl.fromTo("#esc02-login-spot", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.5, ease: "power2.out" }, 3.28);
+          tl.to("#esc02-login-spot", { x: 120, y: 258, scaleX: 1.0, scaleY: 1.0, duration: 0.55, ease: "power2.inOut" }, 5.81);
+          tl.to("#esc02-login-spot", { x: 120, y: 358, scaleX: 1.0, scaleY: 1.0, duration: 0.55, ease: "power2.inOut" }, 8.33);
+          tl.to("#esc02-login-spot", { autoAlpha: 0, duration: 0.45, ease: "power2.in" }, 12.12);
+          tl.fromTo("#esc02-login-cue0", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 2.38);
+          tl.to("#esc02-login-cue0", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 3.28);
+          tl.to("#esc02-login-cue0", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 5.81);
+          tl.fromTo("#esc02-login-cue1", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 4.909999999999999);
+          tl.to("#esc02-login-cue1", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 5.81);
+          tl.to("#esc02-login-cue1", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 8.33);
+          tl.fromTo("#esc02-login-cue2", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 7.43);
+          tl.to("#esc02-login-cue2", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 8.33);
 
           window.__timelines["esc02-login"] = tl;
         })();

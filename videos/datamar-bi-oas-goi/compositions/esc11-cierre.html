@@ -124,7 +124,7 @@
         data-composition-id="esc11-cierre"
         data-width="1920"
         data-height="1080"
-        data-duration="15"
+        data-duration="18.7"
       >
         <div class="bg-mesh" id="s11-mesh"></div>
         <div class="bg-glow" id="s11-glow"></div>
@@ -165,17 +165,17 @@
         (function () {
           const tl = gsap.timeline({ paused: true });
 
-          tl.fromTo("#s11-mesh", { y: 0 }, { y: 48, duration: 15, ease: "none" }, 0);
+          tl.fromTo("#s11-mesh", { y: 0 }, { y: 48, duration: 18.7, ease: "none" }, 0);
           tl.fromTo(
             "#s11-glow",
             { scale: 0.9, opacity: 0.6 },
-            { scale: 1.08, opacity: 0.9, duration: 7.5, ease: "sine.inOut", yoyo: true, repeat: 1 },
+            { scale: 1.08, opacity: 0.9, duration: 9.35, ease: "sine.inOut", yoyo: true, repeat: 1 },
             0
           );
           tl.fromTo(
             "#s11-glow2",
             { scale: 1.06, opacity: 0.75 },
-            { scale: 0.92, opacity: 0.5, duration: 7.5, ease: "sine.inOut", yoyo: true, repeat: 1 },
+            { scale: 0.92, opacity: 0.5, duration: 9.35, ease: "sine.inOut", yoyo: true, repeat: 1 },
             0
           );
 
@@ -197,7 +197,7 @@
           tl.fromTo("#s11-foot", { autoAlpha: 0, x: -40 }, { autoAlpha: 1, x: 0, duration: 0.6, ease: "power3.out" }, 1.95);
 
           /* respiración final del bloque de acciones — conteo finito */
-          tl.to(".recap", { y: -8, duration: 3.4, ease: "sine.inOut", yoyo: true, repeat: 2 }, 3.2);
+          tl.to(".recap", { y: -8, duration: 4.2, ease: "sine.inOut", yoyo: true, repeat: 2 }, 3.2);
 
           window.__timelines["esc11-cierre"] = tl;
         })();
