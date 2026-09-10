@@ -49,7 +49,7 @@ encabezados: son referencia para ti.
 
 ### Escena 0 — Portada
 
-> Bienvenidos a esta capacitación sobre el acceso al Sistema Datamar BI, OAS, de la Gerencia de Operaciones Internacionales.
+> Bienvenidos a esta capacitación sobre el acceso al Sistema Datamart BI, OAS, de la Gerencia de Operaciones Internacionales.
 
 ### Escena 1 — Acceso a la plataforma
 
