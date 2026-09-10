@@ -93,7 +93,13 @@ encabezados: son referencia para ti.
 
 ### Escena 11 — Cierre
 
-> De esta manera podrás interactuar con los diversos reportes disponibles que existen en el OAS. Con esto, ya conoces cómo acceder, navegar, filtrar y exportar reportes en Datamart BI OAS.
+> De esta manera podrás interactuar con los diversos reportes disponibles que existen en el OAS. Con esto, ya conoces cómo acceder, navegar, filtrar y exportar reportes en el Datamart BI OAS de la GOI.
+
+> ⚠ **El audio entregado NO dice esto todavía.** `Audio_Capacitación.mp4` se
+> sintetizó cuando esta línea aún decía «…en Datamar BI OAS» (sin la T y sin
+> «de la GOI»). Para que la voz y el subtítulo coincidan hay que volver a
+> sintetizar **solo esta escena** y dejarla en `assets/audio/camila/esc11.wav`.
+> Mientras tanto el video usa el texto realmente grabado.
 
 ---
 
