@@ -93,7 +93,7 @@ encabezados: son referencia para ti.
 
 ### Escena 11 — Cierre
 
-> De esta manera podrás interactuar con los diversos reportes disponibles que existen en el OAS. Con esto, ya conoces cómo acceder, navegar, filtrar y exportar reportes en Datamar BI OAS.
+> De esta manera podrás interactuar con los diversos reportes disponibles que existen en el OAS. Con esto, ya conoces cómo acceder, navegar, filtrar y exportar reportes en el Datamart BI OAS de la GOI.
 
 ---
 
