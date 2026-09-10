@@ -5,3 +5,4 @@ videos/*/node_modules/
 videos/*/.hyperframes/
 videos/*/out/
 videos/*/renders/
+videos/*/node_modules/

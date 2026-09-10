@@ -202,7 +202,8 @@ def build(voz=None):
             rel = os.path.relpath(tr["audio"], ROOT).replace(os.sep, "/")
             auds.append(
                 f'      <audio id="vo-{tr["slug"]}" src="{rel}" data-start="{round(st + LEAD, 2)}" '
-                f'data-duration="{round(tr["speech"], 2)}" data-track-index="8" data-volume="1"></audio>'
+                f'data-duration="{round(tr["speech"], 2)}" data-track-index="8" '
+                f'data-audio-group="voiceover" data-volume="1"></audio>'
             )
 
         words = [len(l.split()) for l in tr["lines"]]
@@ -219,6 +220,19 @@ def build(voz=None):
             cur += d
 
     audio_block = ("\n\n      <!-- narración -->\n" + "\n".join(auds)) if auds else ""
+
+    # La cama musical entra como una sola pista bajo todo. El equilibrio con la
+    # voz NO se hace aquí a mano: lo escribe el voiceover carve del framework
+    # (scripts/carve.mjs), que abre hueco por bandas en vez de bajar el volumen
+    # entero — así la música conserva graves y aire mientras la voz se entiende.
+    cama = os.path.join(ROOT, "assets", "audio", "musica", "cama.wav")
+    if os.path.isfile(cama):
+        audio_block += (
+            '\n\n      <!-- cama musical -->\n'
+            f'      <audio id="music-bed" src="assets/audio/musica/cama.wav" '
+            f'data-start="0" data-duration="{total:g}" data-track-index="7" '
+            f'data-audio-group="music" data-volume="1"></audio>'
+        )
 
     html = f"""<!doctype html>
 <html lang="es">
@@ -308,8 +322,14 @@ def build(voz=None):
     m, s = divmod(total, 60)
     print(f"\nTotal: {total:.1f} s = {int(m)}:{int(s):02d}   ·   {len(index)} subtítulos")
     faltan = [t["slug"] for t in tracks if not t["audio"]]
+    if os.path.isfile(cama):
+        print("\n⚠ Este script reescribe index.html, así que se llevó por delante el")
+        print("  voiceover carve de la cama musical. Vuelve a aplicarlo:")
+        print("      node <skills>/hyperframes-audio/scripts/carve.mjs --comp index.html")
+        print("  Sin eso la música suena a volumen plano bajo la voz.")
+
     if have_audio:
-        print(f"Voz «{voz}»: los tiempos siguen a la grabación.")
+        print(f"\nVoz «{voz}»: los tiempos siguen a la grabación.")
         if faltan:
             print(f"  ⚠ sin audio y por tanto estimadas: {', '.join(faltan)}")
     else:

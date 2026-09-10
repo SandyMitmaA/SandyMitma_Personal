@@ -1,5 +1,5 @@
 {
-  "duracion_total": 176.56,
+  "duracion_total": 176.86,
   "subtitulos": [
     {
       "escena": "esc00-portada",
@@ -17,91 +17,91 @@
       "escena": "esc01-link",
       "texto": "Para acceder a la plataforma, debemos ingresar al siguiente link.",
       "inicio": 12.44,
-      "duracion": 6.07
+      "duracion": 6.08
     },
     {
       "escena": "esc02-login",
       "texto": "En la ventana se mostrará la pantalla de login.",
-      "inicio": 20.31,
+      "inicio": 20.32,
       "duracion": 5.73
     },
     {
       "escena": "esc02-login",
       "texto": "Aquí deberás ingresar tus credenciales: usuario y contraseña.",
-      "inicio": 26.04,
+      "inicio": 26.05,
       "duracion": 5.09
     },
     {
       "escena": "esc03-overview",
       "texto": "Esto nos dirigirá a la ventana principal, Overview,",
-      "inicio": 32.93,
-      "duracion": 4.57
+      "inicio": 32.94,
+      "duracion": 4.64
     },
     {
       "escena": "esc03-overview",
       "texto": "donde se muestran los diversos dashboards y reportes disponibles, agrupados por área temática.",
-      "inicio": 37.5,
-      "duracion": 7.42
+      "inicio": 37.58,
+      "duracion": 7.54
     },
     {
       "escena": "esc03-overview",
       "texto": "Por ejemplo: Portafolio y Contrapartes, o Indicadores de Desempeño, entre otros.",
-      "inicio": 44.92,
-      "duracion": 6.28
+      "inicio": 45.12,
+      "duracion": 6.38
     },
     {
       "escena": "esc04-abrir-reporte",
       "texto": "Si se requiere consultar alguno de estos reportes, solo es necesario dar clic para acceder.",
-      "inicio": 53.01,
-      "duracion": 8.23
+      "inicio": 53.3,
+      "duracion": 7.7
     },
     {
       "escena": "esc04-abrir-reporte",
       "texto": "Por ejemplo, el reporte de Portafolio vs Referencia.",
-      "inicio": 61.24,
-      "duracion": 4.39
+      "inicio": 61.0,
+      "duracion": 4.11
     },
     {
       "escena": "esc05-filtros",
       "texto": "Aquí se mostrará el reporte.",
-      "inicio": 67.44,
-      "duracion": 2.86
+      "inicio": 66.91,
+      "duracion": 2.91
     },
     {
       "escena": "esc05-filtros",
       "texto": "En la parte lateral izquierda encontramos un panel con los filtros disponibles:",
-      "inicio": 70.3,
-      "duracion": 6.86
+      "inicio": 69.82,
+      "duracion": 6.99
     },
     {
       "escena": "esc05-filtros",
       "texto": "frecuencia, ya sea diaria, mensual o anual;",
-      "inicio": 77.16,
-      "duracion": 4.0
+      "inicio": 76.81,
+      "duracion": 4.07
     },
     {
       "escena": "esc05-filtros",
       "texto": "fecha o rango de fecha; moneda; instrumento;",
-      "inicio": 81.16,
-      "duracion": 4.0
+      "inicio": 80.88,
+      "duracion": 4.07
     },
     {
       "escena": "esc05-filtros",
       "texto": "metodología de consulta;",
-      "inicio": 85.17,
-      "duracion": 1.72
+      "inicio": 84.95,
+      "duracion": 1.75
     },
     {
       "escena": "esc05-filtros",
       "texto": "y si se desea ver el reporte a nivel de tramo o moneda.",
-      "inicio": 86.88,
-      "duracion": 7.43
+      "inicio": 86.7,
+      "duracion": 7.57
     },
     {
       "escena": "esc05-filtros",
       "texto": "Finalmente, se debe presionar Aplicar.",
-      "inicio": 94.32,
-      "duracion": 2.86
+      "inicio": 94.27,
+      "duracion": 2.91
     },
     {
       "escena": "esc06-exportar",
@@ -124,50 +124,50 @@
     {
       "escena": "esc08-datos",
       "texto": "Con la otra opción, Datos, se podrá exportar en formatos Excel, CSV,",
-      "inicio": 123.05,
-      "duracion": 7.5
+      "inicio": 123.06,
+      "duracion": 7.29
     },
     {
       "escena": "esc08-datos",
       "texto": "delimitado por tabulaciones, y XML.",
-      "inicio": 130.55,
-      "duracion": 3.13
+      "inicio": 130.35,
+      "duracion": 3.04
     },
     {
       "escena": "esc09-superior-derecha",
       "texto": "Otra manera de exportar es dando clic en la parte superior derecha,",
-      "inicio": 135.48,
-      "duracion": 5.0
+      "inicio": 135.19,
+      "duracion": 5.18
     },
     {
       "escena": "esc09-superior-derecha",
       "texto": "en Exportar a Excel, o en Exportar Página Actual.",
-      "inicio": 140.48,
-      "duracion": 3.75
+      "inicio": 140.37,
+      "duracion": 3.88
     },
     {
       "escena": "esc10-regresar",
       "texto": "Si se requiere regresar a la página principal,",
-      "inicio": 147.48,
-      "duracion": 3.51
+      "inicio": 147.19,
+      "duracion": 3.26
     },
     {
       "escena": "esc10-regresar",
       "texto": "nos dirigimos a Panel de Control y hacemos clic en Overview.",
-      "inicio": 150.99,
-      "duracion": 4.83
+      "inicio": 150.45,
+      "duracion": 4.48
     },
     {
       "escena": "esc11-cierre",
       "texto": "De esta manera podrás interactuar con los diversos reportes disponibles que existen en el OAS.",
-      "inicio": 158.48,
-      "duracion": 8.44
+      "inicio": 158.19,
+      "duracion": 8.73
     },
     {
       "escena": "esc11-cierre",
       "texto": "Con esto, ya conoces cómo acceder, navegar, filtrar y exportar reportes en Datamar BI OAS.",
       "inicio": 166.92,
-      "duracion": 8.44
+      "duracion": 8.73
     }
   ]
 }

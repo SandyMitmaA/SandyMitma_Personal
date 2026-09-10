@@ -142,7 +142,7 @@
         data-composition-id="esc03-overview"
         data-width="1920"
         data-height="1080"
-        data-duration="20.08"
+        data-duration="20.36"
       >
         <div class="bg-mesh" id="esc03-overview-mesh"></div>
         <div class="bg-glow" id="esc03-overview-glow"></div>
@@ -174,8 +174,8 @@
       <script>
         (function () {
           const tl = gsap.timeline({ paused: true });
-          tl.fromTo("#esc03-overview-mesh", { y: 0 }, { y: 40, duration: 20.08, ease: "none" }, 0);
-          tl.fromTo("#esc03-overview-glow", { scale: 0.94, opacity: 0.78 }, { scale: 1.06, opacity: 1, duration: 10.04, ease: "sine.inOut", yoyo: true, repeat: 1 }, 0);
+          tl.fromTo("#esc03-overview-mesh", { y: 0 }, { y: 40, duration: 20.36, ease: "none" }, 0);
+          tl.fromTo("#esc03-overview-glow", { scale: 0.94, opacity: 0.78 }, { scale: 1.06, opacity: 1, duration: 10.18, ease: "sine.inOut", yoyo: true, repeat: 1 }, 0);
           tl.fromTo("#esc03-overview-topbar", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power3.out" }, 0);
           tl.fromTo("#esc03-overview-divider", { scaleY: 0 }, { scaleY: 1, duration: 0.6, ease: "power2.out" }, 0.2);
 
@@ -190,19 +190,19 @@
 
           /* cámara — coordinate-target-zoom */
           tl.set("#esc03-overview-zoom", { scale: 0.79, x: 0.0, y: 0.0 }, 0);
-          tl.to("#esc03-overview-zoom", { scale: 1.52, x: 0.0, y: -216.3, duration: 2.01, ease: "power2.inOut" }, 6.78);
-          tl.to("#esc03-overview-zoom", { scale: 1.52, x: 0.0, y: -701.7, duration: 1.76, ease: "power2.inOut" }, 13.05);
+          tl.to("#esc03-overview-zoom", { scale: 1.52, x: 0.0, y: -216.3, duration: 2.04, ease: "power2.inOut" }, 6.87);
+          tl.to("#esc03-overview-zoom", { scale: 1.52, x: 0.0, y: -701.7, duration: 1.78, ease: "power2.inOut" }, 13.23);
 
           /* reflector — un solo foco que recorre la pantalla */
           tl.set("#esc03-overview-spot", { x: 14, y: 190, scaleX: 1, scaleY: 1 }, 0);
-          tl.fromTo("#esc03-overview-spot", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.5, ease: "power2.out" }, 8.28);
-          tl.to("#esc03-overview-spot", { x: 14, y: 596, scaleX: 1.0, scaleY: 0.825, duration: 0.55, ease: "power2.inOut" }, 14.06);
-          tl.to("#esc03-overview-spot", { autoAlpha: 0, duration: 0.45, ease: "power2.in" }, 19.58);
-          tl.fromTo("#esc03-overview-cue0", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 7.379999999999999);
-          tl.to("#esc03-overview-cue0", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 8.28);
-          tl.to("#esc03-overview-cue0", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 14.06);
-          tl.fromTo("#esc03-overview-cue1", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 13.16);
-          tl.to("#esc03-overview-cue1", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 14.06);
+          tl.fromTo("#esc03-overview-spot", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.5, ease: "power2.out" }, 8.4);
+          tl.to("#esc03-overview-spot", { x: 14, y: 596, scaleX: 1.0, scaleY: 0.825, duration: 0.55, ease: "power2.inOut" }, 14.25);
+          tl.to("#esc03-overview-spot", { autoAlpha: 0, duration: 0.45, ease: "power2.in" }, 19.86);
+          tl.fromTo("#esc03-overview-cue0", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 7.5);
+          tl.to("#esc03-overview-cue0", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 8.4);
+          tl.to("#esc03-overview-cue0", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 14.25);
+          tl.fromTo("#esc03-overview-cue1", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 13.35);
+          tl.to("#esc03-overview-cue1", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 14.25);
 
           window.__timelines["esc03-overview"] = tl;
         })();
