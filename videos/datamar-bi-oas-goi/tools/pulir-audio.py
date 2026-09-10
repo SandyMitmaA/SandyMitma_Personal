@@ -40,16 +40,27 @@ def ffmpeg(args, **kw):
     return subprocess.run(["ffmpeg", *args], capture_output=True, text=True, **kw)
 
 
-def cadena_base(con_eq=True):
-    pasos = ["highpass=f=80"]
+def cadena_base(con_eq=True, paso_alto=80.0, zumbido=None,
+                mud=-2.0, presencia=2.5, umbral_puerta=-45.0):
+    """Los valores por defecto sirven a una locución sintética limpia.
+
+    Una grabación humana pide más: un paso alto más arriba y, si hay red
+    eléctrica en la toma, una muesca en su frecuencia. Ambos se pasan medidos,
+    no supuestos.
+    """
+    pasos = [f"highpass=f={paso_alto:.0f}:poles=2"]
+    if zumbido:
+        # muesca estrecha en la fundamental de red; con el paso alto arriba
+        # suele bastar, pero deja el residuo por debajo de lo audible
+        pasos.append(f"equalizer=f={zumbido:.0f}:t=q:w=8:g=-18")
     if con_eq:
         pasos += [
-            "equalizer=f=300:t=q:w=1.2:g=-2",      # quita el barro
-            "equalizer=f=2800:t=q:w=1.0:g=2.5",    # levanta las consonantes
+            f"equalizer=f=320:t=q:w=1.2:g={mud}",
+            f"equalizer=f=2800:t=q:w=1.0:g={presencia}",
         ]
+    umbral_lin = 10 ** (umbral_puerta / 20)
     pasos += [
-        # umbral -45 dB, reducción de 30 dB: expansor, no compuerta brusca
-        "agate=threshold=0.0056:ratio=2:attack=8:release=180:range=0.032",
+        f"agate=threshold={umbral_lin:.5f}:ratio=2:attack=8:release=180:range=0.032",
         "acompressor=threshold=-18dB:ratio=2:attack=15:release=250:makeup=1",
     ]
     return ",".join(pasos)
@@ -75,6 +86,16 @@ def main():
     ap.add_argument("--sin-eq", action="store_true",
                     help="omite el ecualizador; solo limpia y nivela")
     ap.add_argument("--lufs", type=float, default=OBJETIVO_LUFS)
+    ap.add_argument("--paso-alto", type=float, default=80.0, dest="paso_alto",
+                    help="Hz del paso alto; súbelo si hay retumbe o zumbido")
+    ap.add_argument("--zumbido", type=float,
+                    help="Hz de la red eléctrica a suprimir (50 o 60)")
+    ap.add_argument("--mud", type=float, default=-2.0,
+                    help="dB a quitar en 320 Hz")
+    ap.add_argument("--presencia", type=float, default=2.5,
+                    help="dB a sumar en 2.8 kHz")
+    ap.add_argument("--umbral-puerta", type=float, default=-45.0, dest="umbral_puerta",
+                    help="dB por debajo de los cuales se considera pausa")
     a = ap.parse_args()
 
     if not os.path.isfile(a.entrada):
@@ -84,7 +105,17 @@ def main():
     antes = medir(a.entrada)
     print(f"Entrada:  {antes['lufs']} LUFS · LRA {antes['lra']} LU · pico real {antes['tp']} dBFS")
 
-    base = cadena_base(con_eq=not a.sin_eq)
+    base = cadena_base(con_eq=not a.sin_eq, paso_alto=a.paso_alto,
+                       zumbido=a.zumbido, mud=a.mud, presencia=a.presencia,
+                       umbral_puerta=a.umbral_puerta)
+    detalle = [f"paso alto {a.paso_alto:.0f} Hz"]
+    if a.zumbido:
+        detalle.append(f"muesca {a.zumbido:.0f} Hz")
+    if not a.sin_eq:
+        detalle.append(f"320 Hz {a.mud:+.1f} dB")
+        detalle.append(f"2.8 kHz {a.presencia:+.1f} dB")
+    detalle.append(f"puerta {a.umbral_puerta:.0f} dB")
+    print("Cadena:   " + " · ".join(detalle))
 
     # --- primera pasada: medir lo que quedará después del proceso ---
     print("Analizando…")

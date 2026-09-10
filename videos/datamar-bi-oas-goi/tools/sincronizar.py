@@ -150,7 +150,7 @@ def audio_duration(path):
     raise RuntimeError(f"No se pudo medir la duración de {path}")
 
 
-def build(voz=None, sin_voz=False):
+def build(voz=None, sin_voz=False, texto="sistema"):
     tracks, have_audio = [], False
     for slug, cid, src, lines in SCENES:
         path = find_audio(slug, voz)
@@ -172,9 +172,9 @@ def build(voz=None, sin_voz=False):
         t += tr["dur"]
     total = round(t, 2)
 
-    if sin_voz:
-        # Sin locución que contradecir, el área prefiere «Solución» a «Sistema».
-        # La portada es otro archivo porque el titular va grabado en la imagen.
+    if texto == "solucion":
+        # La portada es otro archivo porque el titular va grabado en la imagen,
+        # no es texto que se pueda sustituir en el montaje.
         tracks[0]["src"] = "compositions/esc00-portada-solucion.html"
         tracks[0]["cid"] = "esc00-portada-solucion"
         tracks[0]["lines"] = [
@@ -356,8 +356,11 @@ def main():
     ap.add_argument("--listar", action="store_true", help="lista las voces disponibles")
     ap.add_argument("--sin-voz", action="store_true", dest="sin_voz",
                     help="corte sin locución: conserva los tiempos de --voz pero no monta "
-                         "las pistas de voz, usa la cama a rango completo y dice "
-                         "«Solución» donde la versión narrada dice «Sistema»")
+                         "las pistas de voz y usa la cama a rango completo")
+    ap.add_argument("--texto", choices=("sistema", "solucion"),
+                    help="redacción de la portada: «Acceso al Sistema» o «Acceso a la "
+                         "Solución». Por defecto «solucion» sin voz y «sistema» con voz, "
+                         "porque la locución de Camila dice «Sistema» en voz alta")
     a = ap.parse_args()
 
     disponibles = voces_disponibles()
@@ -378,7 +381,8 @@ def main():
             print("Disponibles: " + ", ".join(n for n, _ in disponibles))
         return 1
 
-    return build(a.voz, a.sin_voz)
+    texto = a.texto or ("solucion" if a.sin_voz else "sistema")
+    return build(a.voz, a.sin_voz, texto)
 
 
 if __name__ == "__main__":

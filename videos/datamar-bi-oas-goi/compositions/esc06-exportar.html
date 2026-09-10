@@ -142,7 +142,7 @@
         data-composition-id="esc06-exportar"
         data-width="1920"
         data-height="1080"
-        data-duration="8.12"
+        data-duration="11.02"
       >
         <div class="bg-mesh" id="esc06-exportar-mesh"></div>
         <div class="bg-glow" id="esc06-exportar-glow"></div>
@@ -173,8 +173,8 @@
       <script>
         (function () {
           const tl = gsap.timeline({ paused: true });
-          tl.fromTo("#esc06-exportar-mesh", { y: 0 }, { y: 40, duration: 8.12, ease: "none" }, 0);
-          tl.fromTo("#esc06-exportar-glow", { scale: 0.94, opacity: 0.78 }, { scale: 1.06, opacity: 1, duration: 4.06, ease: "sine.inOut", yoyo: true, repeat: 1 }, 0);
+          tl.fromTo("#esc06-exportar-mesh", { y: 0 }, { y: 40, duration: 11.02, ease: "none" }, 0);
+          tl.fromTo("#esc06-exportar-glow", { scale: 0.94, opacity: 0.78 }, { scale: 1.06, opacity: 1, duration: 5.51, ease: "sine.inOut", yoyo: true, repeat: 1 }, 0);
           tl.fromTo("#esc06-exportar-topbar", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power3.out" }, 0);
           tl.fromTo("#esc06-exportar-divider", { scaleY: 0 }, { scaleY: 1, duration: 0.6, ease: "power2.out" }, 0.2);
 
@@ -192,10 +192,10 @@
 
           /* reflector — un solo foco que recorre la pantalla */
           tl.set("#esc06-exportar-spot", { x: 145, y: 33, scaleX: 1, scaleY: 1 }, 0);
-          tl.fromTo("#esc06-exportar-spot", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.5, ease: "power2.out" }, 2.84);
-          tl.to("#esc06-exportar-spot", { autoAlpha: 0, duration: 0.45, ease: "power2.in" }, 7.62);
-          tl.fromTo("#esc06-exportar-cue0", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 1.94);
-          tl.to("#esc06-exportar-cue0", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 2.84);
+          tl.fromTo("#esc06-exportar-spot", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.5, ease: "power2.out" }, 3.86);
+          tl.to("#esc06-exportar-spot", { autoAlpha: 0, duration: 0.45, ease: "power2.in" }, 10.52);
+          tl.fromTo("#esc06-exportar-cue0", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 2.96);
+          tl.to("#esc06-exportar-cue0", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 3.86);
 
           window.__timelines["esc06-exportar"] = tl;
         })();
