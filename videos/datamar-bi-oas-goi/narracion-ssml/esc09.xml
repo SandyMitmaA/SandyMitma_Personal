@@ -1,0 +1,7 @@
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="es-PE">
+  <voice name="es-PE-CamilaNeural">
+    <prosody rate="-8%">
+      Otra manera de exportar es dando clic en la parte superior derecha, en Exportar a Excel, o en Exportar Página Actual.
+    </prosody>
+  </voice>
+</speak>

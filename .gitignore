@@ -1,0 +1,7 @@
+
+# HyperFrames — artefactos de trabajo del proyecto de video
+videos/*/snapshots/
+videos/*/node_modules/
+videos/*/.hyperframes/
+videos/*/out/
+videos/*/renders/

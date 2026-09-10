@@ -1,0 +1,7 @@
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="es-PE">
+  <voice name="es-PE-CamilaNeural">
+    <prosody rate="-8%">
+      Con la otra opción, Datos, se podrá exportar en formatos Excel, <say-as interpret-as="characters">CSV</say-as>, delimitado por tabulaciones, y <say-as interpret-as="characters">XML</say-as>.
+    </prosody>
+  </voice>
+</speak>

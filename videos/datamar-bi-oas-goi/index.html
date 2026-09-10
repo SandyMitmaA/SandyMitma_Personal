@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="assets/vendor/gsap.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #f4f7fb;
+      }
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+      .clip {
+        position: absolute;
+        inset: 0;
+      }
+      .caption {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: 42px;
+      }
+      .caption-inner {
+        display: inline-block;
+        max-width: 1480px;
+        text-align: center;
+        background: rgba(0, 34, 68, 0.9);
+        color: #ffffff;
+        font-size: 38px;
+        font-weight: 700;
+        line-height: 1.34;
+        letter-spacing: -0.01em;
+        padding: 20px 40px;
+        border-bottom: 4px solid #29a1e6;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="148.5"
+      data-width="1920"
+      data-height="1080"
+      data-fps="30"
+      style="position: relative; width: 1920px; height: 1080px; overflow: hidden; background: #f4f7fb"
+    >
+      <div
+        id="host-esc00-portada"
+        class="clip"
+        data-composition-id="esc00-portada"
+        data-composition-src="compositions/esc00-portada.html"
+        data-start="0"
+        data-duration="10"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+      <div
+        id="host-esc01-link"
+        class="clip"
+        data-composition-id="esc01-link"
+        data-composition-src="compositions/esc01-link.html"
+        data-start="9.5"
+        data-duration="7.5"
+        data-track-index="2"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+      <div
+        id="host-esc02-login"
+        class="clip"
+        data-composition-id="esc02-login"
+        data-composition-src="compositions/esc02-login.html"
+        data-start="16.5"
+        data-duration="10.5"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+      <div
+        id="host-esc03-overview"
+        class="clip"
+        data-composition-id="esc03-overview"
+        data-composition-src="compositions/esc03-overview.html"
+        data-start="26.5"
+        data-duration="16.5"
+        data-track-index="2"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+      <div
+        id="host-esc04-abrir-reporte"
+        class="clip"
+        data-composition-id="esc04-abrir-reporte"
+        data-composition-src="compositions/esc04-abrir-reporte.html"
+        data-start="42.5"
+        data-duration="12.5"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+      <div
+        id="host-esc05-filtros"
+        class="clip"
+        data-composition-id="esc05-filtros"
+        data-composition-src="compositions/esc05-filtros.html"
+        data-start="54.5"
+        data-duration="25.5"
+        data-track-index="2"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+      <div
+        id="host-esc06-exportar"
+        class="clip"
+        data-composition-id="esc06-exportar"
+        data-composition-src="compositions/esc06-exportar.html"
+        data-start="79.5"
+        data-duration="8.5"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+      <div
+        id="host-esc07-con-formato"
+        class="clip"
+        data-composition-id="esc07-con-formato"
+        data-composition-src="compositions/esc07-con-formato.html"
+        data-start="87.5"
+        data-duration="13.5"
+        data-track-index="2"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+      <div
+        id="host-esc08-datos"
+        class="clip"
+        data-composition-id="esc08-datos"
+        data-composition-src="compositions/esc08-datos.html"
+        data-start="100.5"
+        data-duration="10.5"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+      <div
+        id="host-esc09-superior-derecha"
+        class="clip"
+        data-composition-id="esc09-superior-derecha"
+        data-composition-src="compositions/esc09-superior-derecha.html"
+        data-start="110.5"
+        data-duration="12.5"
+        data-track-index="2"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+      <div
+        id="host-esc10-regresar"
+        class="clip"
+        data-composition-id="esc10-regresar"
+        data-composition-src="compositions/esc10-regresar.html"
+        data-start="122.5"
+        data-duration="11.5"
+        data-track-index="1"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+      <div
+        id="host-esc11-cierre"
+        class="clip"
+        data-composition-id="esc11-cierre"
+        data-composition-src="compositions/esc11-cierre.html"
+        data-start="133.5"
+        data-duration="15"
+        data-track-index="2"
+        data-width="1920"
+        data-height="1080"
+      ></div>
+
+      <!-- subtítulos -->
+      <div id="cap-00-0" class="clip caption" data-start="0.6" data-duration="5.27" data-track-index="9" data-layout-allow-caption-zone="true"><span class="caption-inner">Bienvenidos a esta capacitación sobre el acceso al Sistema Datamar BI – OAS,</span></div>
+      <div id="cap-00-1" class="clip caption" data-start="5.87" data-duration="2.43" data-track-index="9" data-layout-allow-caption-zone="true"><span class="caption-inner">de la Gerencia de Operaciones Internacionales.</span></div>
+      <div id="cap-01-0" class="clip caption" data-start="10.1" data-duration="4.05" data-track-index="9" data-layout-allow-caption-zone="true"><span class="caption-inner">Para acceder a la plataforma, debemos ingresar al siguiente link.</span></div>
+      <div id="cap-02-0" class="clip caption" data-start="17.1" data-duration="3.65" data-track-index="9" data-layout-allow-caption-zone="true"><span class="caption-inner">En la ventana se mostrará la pantalla de login.</span></div>
+      <div id="cap-02-1" class="clip caption" data-start="20.75" data-duration="3.24" data-track-index="9" data-layout-allow-caption-zone="true"><span class="caption-inner">Aquí deberás ingresar tus credenciales: usuario y contraseña.</span></div>
+      <div id="cap-03-0" class="clip caption" data-start="27.1" data-duration="3.24" data-track-index="9" data-layout-allow-caption-zone="true"><span class="caption-inner">Esto nos dirigirá a la ventana principal, Overview,</span></div>
+      <div id="cap-03-1" class="clip caption" data-start="30.34" data-duration="5.27" data-track-index="9" data-layout-allow-caption-zone="true"><span class="caption-inner">donde se muestran los diversos dashboards y reportes disponibles, agrupados por área temática.</span></div>
+      <div id="cap-03-2" class="clip caption" data-start="35.61" data-duration="4.46" data-track-index="9" data-layout-allow-caption-zone="true"><span class="caption-inner">Por ejemplo: Portafolio y Contrapartes, o Indicadores de Desempeño, entre otros.</span></div>
+      <div id="cap-04-0" class="clip caption" data-start="43.1" data-duration="6.08" data-track-index="9" data-layout-allow-caption-zone="true"><span class="caption-inner">Si se requiere consultar alguno de estos reportes, solo es necesario dar clic para acceder.</span></div>
+      <div id="cap-04-1" class="clip caption" data-start="49.18" data-duration="3.24" data-track-index="9" data-layout-allow-caption-zone="true"><span class="caption-inner">Por ejemplo, el reporte de Portafolio vs Referencia.</span></div>
+      <div id="cap-05-0" class="clip caption" data-start="55.1" data-duration="2.03" data-track-index="9" data-layout-allow-caption-zone="true"><span class="caption-inner">Aquí se mostrará el reporte.</span></div>
+      <div id="cap-05-1" class="clip caption" data-start="57.13" data-duration="4.86" data-track-index="9" data-layout-allow-caption-zone="true"><span class="caption-inner">En la parte lateral izquierda encontramos un panel con los filtros disponibles:</span></div>
+      <div id="cap-05-2" class="clip caption" data-start="61.99" data-duration="2.84" data-track-index="9" data-layout-allow-caption-zone="true"><span class="caption-inner">frecuencia, ya sea diaria, mensual o anual;</span></div>
+      <div id="cap-05-3" class="clip caption" data-start="64.83" data-duration="2.84" data-track-index="9" data-layout-allow-caption-zone="true"><span class="caption-inner">fecha o rango de fecha; moneda; instrumento;</span></div>
+      <div id="cap-05-4" class="clip caption" data-start="67.67" data-duration="1.22" data-track-index="9" data-layout-allow-caption-zone="true"><span class="caption-inner">metodología de consulta;</span></div>
+      <div id="cap-05-5" class="clip caption" data-start="68.88" data-duration="5.27" data-track-index="9" data-layout-allow-caption-zone="true"><span class="caption-inner">y si se desea ver el reporte a nivel de tramo o moneda.</span></div>
+      <div id="cap-05-6" class="clip caption" data-start="74.15" data-duration="2.03" data-track-index="9" data-layout-allow-caption-zone="true"><span class="caption-inner">Finalmente, se debe presionar Aplicar.</span></div>
+      <div id="cap-06-0" class="clip caption" data-start="80.1" data-duration="5.68" data-track-index="9" data-layout-allow-caption-zone="true"><span class="caption-inner">Para exportar los resultados, en la parte inferior se mostrará la opción de exportar.</span></div>
+      <div id="cap-07-0" class="clip caption" data-start="88.1" data-duration="3.65" data-track-index="9" data-layout-allow-caption-zone="true"><span class="caption-inner">Al hacer clic se mostrarán los distintos formatos disponibles.</span></div>
+      <div id="cap-07-1" class="clip caption" data-start="91.75" data-duration="6.08" data-track-index="9" data-layout-allow-caption-zone="true"><span class="caption-inner">Con la opción Con Formato, se puede exportar en PDF, Excel, PowerPoint o archivo web.</span></div>
+      <div id="cap-08-0" class="clip caption" data-start="101.1" data-duration="4.86" data-track-index="9" data-layout-allow-caption-zone="true"><span class="caption-inner">Con la otra opción, Datos, se podrá exportar en formatos Excel, CSV,</span></div>
+      <div id="cap-08-1" class="clip caption" data-start="105.96" data-duration="2.03" data-track-index="9" data-layout-allow-caption-zone="true"><span class="caption-inner">delimitado por tabulaciones, y XML.</span></div>
+      <div id="cap-09-0" class="clip caption" data-start="111.1" data-duration="4.86" data-track-index="9" data-layout-allow-caption-zone="true"><span class="caption-inner">Otra manera de exportar es dando clic en la parte superior derecha,</span></div>
+      <div id="cap-09-1" class="clip caption" data-start="115.96" data-duration="3.65" data-track-index="9" data-layout-allow-caption-zone="true"><span class="caption-inner">en Exportar a Excel, o en Exportar Página Actual.</span></div>
+      <div id="cap-10-0" class="clip caption" data-start="123.1" data-duration="3.24" data-track-index="9" data-layout-allow-caption-zone="true"><span class="caption-inner">Si se requiere regresar a la página principal,</span></div>
+      <div id="cap-10-1" class="clip caption" data-start="126.34" data-duration="4.46" data-track-index="9" data-layout-allow-caption-zone="true"><span class="caption-inner">nos dirigimos a Panel de Control y hacemos clic en Overview.</span></div>
+      <div id="cap-11-0" class="clip caption" data-start="134.1" data-duration="6.08" data-track-index="9" data-layout-allow-caption-zone="true"><span class="caption-inner">De esta manera podrás interactuar con los diversos reportes disponibles que existen en el OAS.</span></div>
+      <div id="cap-11-1" class="clip caption" data-start="140.18" data-duration="6.08" data-track-index="9" data-layout-allow-caption-zone="true"><span class="caption-inner">Con esto, ya conoces cómo acceder, navegar, filtrar y exportar reportes en Datamar BI OAS.</span></div>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+
+      /* encadenados entre escenas */
+      tl.fromTo("#host-esc01-link", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power1.inOut" }, 9.5);
+      tl.to("#host-esc00-portada", { opacity: 0, duration: 0.5, ease: "power1.inOut" }, 9.5);
+      tl.fromTo("#host-esc02-login", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power1.inOut" }, 16.5);
+      tl.to("#host-esc01-link", { opacity: 0, duration: 0.5, ease: "power1.inOut" }, 16.5);
+      tl.fromTo("#host-esc03-overview", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power1.inOut" }, 26.5);
+      tl.to("#host-esc02-login", { opacity: 0, duration: 0.5, ease: "power1.inOut" }, 26.5);
+      tl.fromTo("#host-esc04-abrir-reporte", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power1.inOut" }, 42.5);
+      tl.to("#host-esc03-overview", { opacity: 0, duration: 0.5, ease: "power1.inOut" }, 42.5);
+      tl.fromTo("#host-esc05-filtros", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power1.inOut" }, 54.5);
+      tl.to("#host-esc04-abrir-reporte", { opacity: 0, duration: 0.5, ease: "power1.inOut" }, 54.5);
+      tl.fromTo("#host-esc06-exportar", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power1.inOut" }, 79.5);
+      tl.to("#host-esc05-filtros", { opacity: 0, duration: 0.5, ease: "power1.inOut" }, 79.5);
+      tl.fromTo("#host-esc07-con-formato", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power1.inOut" }, 87.5);
+      tl.to("#host-esc06-exportar", { opacity: 0, duration: 0.5, ease: "power1.inOut" }, 87.5);
+      tl.fromTo("#host-esc08-datos", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power1.inOut" }, 100.5);
+      tl.to("#host-esc07-con-formato", { opacity: 0, duration: 0.5, ease: "power1.inOut" }, 100.5);
+      tl.fromTo("#host-esc09-superior-derecha", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power1.inOut" }, 110.5);
+      tl.to("#host-esc08-datos", { opacity: 0, duration: 0.5, ease: "power1.inOut" }, 110.5);
+      tl.fromTo("#host-esc10-regresar", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power1.inOut" }, 122.5);
+      tl.to("#host-esc09-superior-derecha", { opacity: 0, duration: 0.5, ease: "power1.inOut" }, 122.5);
+      tl.fromTo("#host-esc11-cierre", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power1.inOut" }, 133.5);
+      tl.to("#host-esc10-regresar", { opacity: 0, duration: 0.5, ease: "power1.inOut" }, 133.5);
+
+      tl.to({}, { duration: 148.5 }, 0);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

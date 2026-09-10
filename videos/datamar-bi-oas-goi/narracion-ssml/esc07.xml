@@ -1,0 +1,8 @@
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="es-PE">
+  <voice name="es-PE-CamilaNeural">
+    <prosody rate="-8%">
+      Al hacer clic se mostrarán los distintos formatos disponibles.
+      Con la opción Con Formato, se puede exportar en <say-as interpret-as="characters">PDF</say-as>, Excel, PowerPoint o archivo web.
+    </prosody>
+  </voice>
+</speak>

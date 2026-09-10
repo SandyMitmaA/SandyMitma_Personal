@@ -1,0 +1,8 @@
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="es-PE">
+  <voice name="es-PE-CamilaNeural">
+    <prosody rate="-8%">
+      Si se requiere consultar alguno de estos reportes, solo es necesario dar clic para acceder.
+      Por ejemplo, el reporte de Portafolio vs Referencia.
+    </prosody>
+  </voice>
+</speak>

@@ -1,0 +1,7 @@
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="es-PE">
+  <voice name="es-PE-CamilaNeural">
+    <prosody rate="-8%">
+      Para exportar los resultados, en la parte inferior se mostrará la opción de exportar.
+    </prosody>
+  </voice>
+</speak>

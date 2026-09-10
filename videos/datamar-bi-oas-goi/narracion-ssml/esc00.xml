@@ -1,0 +1,7 @@
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="es-PE">
+  <voice name="es-PE-CamilaNeural">
+    <prosody rate="-8%">
+      Bienvenidos a esta capacitación sobre el acceso al Sistema Datamar BI, <say-as interpret-as="characters">OAS</say-as>, de la Gerencia de Operaciones Internacionales.
+    </prosody>
+  </voice>
+</speak>

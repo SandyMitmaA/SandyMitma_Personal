@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <template>
+      <style>
+        #root {
+          position: absolute;
+          inset: 0;
+          width: 1920px;
+          height: 1080px;
+          overflow: hidden;
+          background: #f4f7fb;
+          font-family: "Montserrat", sans-serif;
+          color: #0f2b4a;
+        }
+        .bg-mesh {
+          position: absolute;
+          inset: -60px;
+          background-image: radial-gradient(rgba(13, 73, 136, 0.22) 2px, transparent 2px);
+          background-size: 48px 48px;
+          opacity: 0.55;
+        }
+        .bg-glow {
+          position: absolute;
+          top: -300px;
+          right: -240px;
+          width: 1000px;
+          height: 1000px;
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(41, 161, 230, 0.26) 0%, rgba(41, 161, 230, 0) 68%);
+        }
+        .topbar {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 1920px;
+          height: 8px;
+          background: #003366;
+          transform-origin: left center;
+        }
+        .panel {
+          position: absolute;
+          left: 0;
+          top: 8px;
+          width: 620px;
+          height: 922px;
+          padding: 132px 58px 0 110px;
+        }
+        .step {
+          font-family: "IBM Plex Mono", monospace;
+          font-weight: 700;
+          font-size: 26px;
+          letter-spacing: 0.22em;
+          color: #007dc9;
+          text-transform: uppercase;
+          margin-bottom: 26px;
+        }
+        .ptitle {
+          font-size: 58px;
+          font-weight: 900;
+          line-height: 1.1;
+          letter-spacing: -0.03em;
+          color: #003366;
+        }
+        .prule {
+          width: 120px;
+          height: 5px;
+          background: #29a1e6;
+          margin: 32px 0 28px;
+          transform-origin: left center;
+        }
+        .psub {
+          font-size: 32px;
+          font-weight: 400;
+          line-height: 1.42;
+        }
+        .cue-list {
+          margin-top: 40px;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+        }
+        .cue {
+          font-family: "IBM Plex Mono", monospace;
+          font-size: 25px;
+          font-weight: 700;
+          letter-spacing: 0.03em;
+          color: #0d4988;
+          padding-left: 26px;
+          border-left: 4px solid #29a1e6;
+          line-height: 1.3;
+        }
+        .divider {
+          position: absolute;
+          left: 620px;
+          top: 8px;
+          width: 2px;
+          height: 922px;
+          background: #c9d8e8;
+          transform-origin: top center;
+        }
+        .stage {
+          position: absolute;
+          left: 620px;
+          top: 8px;
+          width: 1300px;
+          height: 922px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .card {
+          position: relative;
+          overflow: hidden;
+          background: #ffffff;
+          border: 3px solid #c9d8e8;
+          box-shadow: 0 20px 54px rgba(0, 51, 102, 0.2);
+        }
+        .zoom {
+          position: absolute;
+          left: 0;
+          top: 0;
+          transform-origin: 0 0;
+        }
+        .zoom img {
+          display: block;
+        }
+        .spot {
+          position: absolute;
+          left: 0;
+          top: 0;
+          transform-origin: 0 0;
+          box-shadow: 0 0 0 9999px rgba(13, 73, 136, 0.4);
+        }
+      </style>
+
+      <div
+        id="root"
+        data-composition-id="esc05-filtros"
+        data-width="1920"
+        data-height="1080"
+        data-duration="25"
+      >
+        <div class="bg-mesh" id="esc05-filtros-mesh"></div>
+        <div class="bg-glow" id="esc05-filtros-glow"></div>
+        <div class="topbar" id="esc05-filtros-topbar"></div>
+
+        <div class="panel">
+          <div class="step" id="esc05-filtros-step">Paso 05</div>
+          <div class="ptitle" id="esc05-filtros-title">El panel de filtros</div>
+          <div class="prule" id="esc05-filtros-rule"></div>
+          <div class="psub" id="esc05-filtros-sub">A la izquierda del reporte defines qué quieres consultar.</div>
+          <div class="cue-list">
+            <div class="cue" id="esc05-filtros-cue0">Frecuencia</div>
+            <div class="cue" id="esc05-filtros-cue1">Fecha de consulta</div>
+            <div class="cue" id="esc05-filtros-cue2">Moneda</div>
+            <div class="cue" id="esc05-filtros-cue3">Instrumento</div>
+            <div class="cue" id="esc05-filtros-cue4">Tipo de fecha</div>
+            <div class="cue" id="esc05-filtros-cue5">Mostrar por</div>
+            <div class="cue" id="esc05-filtros-cue6">Aplicar</div>
+          </div>
+        </div>
+
+        <div class="divider" id="esc05-filtros-divider"></div>
+
+        <div class="stage">
+          <div class="card" id="esc05-filtros-card" style="width: 1201px; height: 784px">
+            <div class="zoom" id="esc05-filtros-zoom" style="width: 1133px; height: 740px">
+              <img src="assets/capturas/escena05_panel_filtros.png" width="1133" height="740" alt="" />
+            <div class="spot" id="esc05-filtros-spot" style="width: 250px; height: 82px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        (function () {
+          const tl = gsap.timeline({ paused: true });
+          tl.fromTo("#esc05-filtros-mesh", { y: 0 }, { y: 40, duration: 25, ease: "none" }, 0);
+          tl.fromTo("#esc05-filtros-glow", { scale: 0.94, opacity: 0.78 }, { scale: 1.06, opacity: 1, duration: 12.5, ease: "sine.inOut", yoyo: true, repeat: 1 }, 0);
+          tl.fromTo("#esc05-filtros-topbar", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power3.out" }, 0);
+          tl.fromTo("#esc05-filtros-divider", { scaleY: 0 }, { scaleY: 1, duration: 0.6, ease: "power2.out" }, 0.2);
+
+          /* panel izquierdo — waterfall-entry */
+          tl.fromTo("#esc05-filtros-step", { autoAlpha: 0, x: -34 }, { autoAlpha: 1, x: 0, duration: 0.45, ease: "power2.out" }, 0.15);
+          tl.fromTo("#esc05-filtros-title", { autoAlpha: 0, y: 44 }, { autoAlpha: 1, y: 0, duration: 0.6, ease: "power4.out" }, 0.3);
+          tl.fromTo("#esc05-filtros-rule", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power3.inOut" }, 0.62);
+          tl.fromTo("#esc05-filtros-sub", { autoAlpha: 0, y: 24 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: "power2.out" }, 0.75);
+
+          /* ficha — spring-pop-entrance */
+          tl.fromTo("#esc05-filtros-card", { autoAlpha: 0, scale: 0.955, y: 26 }, { autoAlpha: 1, scale: 1, y: 0, duration: 0.72, ease: "back.out(1.4)" }, 0.5);
+
+          /* cámara — coordinate-target-zoom */
+          tl.set("#esc05-filtros-zoom", { scale: 1.06, x: 0.5, y: -0.2 }, 0);
+          tl.to("#esc05-filtros-zoom", { scale: 1.42, x: 0.0, y: -79.4, duration: 1.5, ease: "power2.inOut" }, 3.2);
+
+          /* reflector — un solo foco que recorre la pantalla */
+          tl.set("#esc05-filtros-spot", { x: 46, y: 158, scaleX: 1, scaleY: 1 }, 0);
+          tl.fromTo("#esc05-filtros-spot", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.5, ease: "power2.out" }, 5.0);
+          tl.to("#esc05-filtros-spot", { x: 40, y: 244, scaleX: 1.2, scaleY: 0.5366, duration: 0.55, ease: "power2.inOut" }, 8.2);
+          tl.to("#esc05-filtros-spot", { x: 40, y: 294, scaleX: 1.04, scaleY: 0.4878, duration: 0.55, ease: "power2.inOut" }, 11.0);
+          tl.to("#esc05-filtros-spot", { x: 40, y: 344, scaleX: 1.04, scaleY: 0.4878, duration: 0.55, ease: "power2.inOut" }, 13.0);
+          tl.to("#esc05-filtros-spot", { x: 40, y: 394, scaleX: 1.04, scaleY: 0.4878, duration: 0.55, ease: "power2.inOut" }, 15.0);
+          tl.to("#esc05-filtros-spot", { x: 40, y: 442, scaleX: 1.04, scaleY: 0.4878, duration: 0.55, ease: "power2.inOut" }, 17.4);
+          tl.to("#esc05-filtros-spot", { x: 154, y: 486, scaleX: 0.32, scaleY: 0.3659, duration: 0.55, ease: "power2.inOut" }, 20.2);
+          tl.to("#esc05-filtros-spot", { autoAlpha: 0, duration: 0.45, ease: "power2.in" }, 24.5);
+          tl.fromTo("#esc05-filtros-cue0", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 4.1);
+          tl.to("#esc05-filtros-cue0", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 5.0);
+          tl.to("#esc05-filtros-cue0", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 8.2);
+          tl.fromTo("#esc05-filtros-cue1", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 7.299999999999999);
+          tl.to("#esc05-filtros-cue1", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 8.2);
+          tl.to("#esc05-filtros-cue1", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 11.0);
+          tl.fromTo("#esc05-filtros-cue2", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 10.1);
+          tl.to("#esc05-filtros-cue2", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 11.0);
+          tl.to("#esc05-filtros-cue2", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 13.0);
+          tl.fromTo("#esc05-filtros-cue3", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 12.1);
+          tl.to("#esc05-filtros-cue3", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 13.0);
+          tl.to("#esc05-filtros-cue3", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 15.0);
+          tl.fromTo("#esc05-filtros-cue4", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 14.1);
+          tl.to("#esc05-filtros-cue4", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 15.0);
+          tl.to("#esc05-filtros-cue4", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 17.4);
+          tl.fromTo("#esc05-filtros-cue5", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 16.5);
+          tl.to("#esc05-filtros-cue5", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 17.4);
+          tl.to("#esc05-filtros-cue5", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 20.2);
+          tl.fromTo("#esc05-filtros-cue6", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 19.3);
+          tl.to("#esc05-filtros-cue6", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 20.2);
+
+          window.__timelines["esc05-filtros"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>

@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <template>
+      <style>
+        #root {
+          position: absolute;
+          inset: 0;
+          width: 1920px;
+          height: 1080px;
+          overflow: hidden;
+          background: #0d4988;
+          font-family: "Montserrat", sans-serif;
+          color: #ffffff;
+        }
+
+        /* --- capa de fondo --- */
+        .bg-mesh {
+          position: absolute;
+          inset: -60px;
+          background-image: radial-gradient(rgba(255, 255, 255, 0.16) 2px, transparent 2px);
+          background-size: 48px 48px;
+        }
+        .bg-glow {
+          position: absolute;
+          top: -260px;
+          right: -220px;
+          width: 1100px;
+          height: 1100px;
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(41, 161, 230, 0.55) 0%, rgba(41, 161, 230, 0) 68%);
+        }
+        .bg-glow-2 {
+          position: absolute;
+          bottom: -420px;
+          left: -280px;
+          width: 900px;
+          height: 900px;
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(0, 125, 201, 0.45) 0%, rgba(0, 125, 201, 0) 70%);
+        }
+
+        /* --- contenido --- */
+        .stage {
+          position: absolute;
+          inset: 0;
+          padding: 118px 150px 210px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+        }
+
+        .crest {
+          display: flex;
+          align-items: center;
+          gap: 26px;
+          margin-bottom: 78px;
+        }
+        .crest-mark {
+          width: 76px;
+          height: 76px;
+          border: 3px solid rgba(255, 255, 255, 0.85);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: "IBM Plex Mono", monospace;
+          font-weight: 700;
+          font-size: 26px;
+          letter-spacing: 0.04em;
+        }
+        .crest-name {
+          font-family: "IBM Plex Mono", monospace;
+          font-weight: 400;
+          font-size: 26px;
+          line-height: 1.45;
+          letter-spacing: 0.14em;
+          color: rgba(255, 255, 255, 0.9);
+          text-transform: uppercase;
+        }
+
+        .eyebrow {
+          font-family: "IBM Plex Mono", monospace;
+          font-weight: 700;
+          font-size: 30px;
+          letter-spacing: 0.32em;
+          color: #9fd4f5;
+          text-transform: uppercase;
+          margin-bottom: 34px;
+        }
+
+        .title-line {
+          font-size: 96px;
+          font-weight: 900;
+          line-height: 1.08;
+          letter-spacing: -0.03em;
+          max-width: 1380px;
+        }
+        .title-line + .title-line {
+          margin-top: 6px;
+        }
+
+        .rule {
+          width: 300px;
+          height: 6px;
+          background: #29a1e6;
+          margin: 46px 0 38px;
+          transform-origin: left center;
+        }
+
+        .sub {
+          font-size: 38px;
+          font-weight: 400;
+          line-height: 1.4;
+          color: rgba(255, 255, 255, 0.92);
+          max-width: 1100px;
+        }
+      </style>
+
+      <div
+        id="root"
+        data-composition-id="esc00-portada"
+        data-width="1920"
+        data-height="1080"
+        data-duration="9"
+      >
+        <div class="bg-mesh" id="p0-mesh"></div>
+        <div class="bg-glow" id="p0-glow"></div>
+        <div class="bg-glow-2" id="p0-glow2"></div>
+
+        <div class="stage">
+          <div class="crest" id="p0-crest">
+            <div class="crest-mark">BCRP</div>
+            <div class="crest-name">
+              <div>Banco Central de Reserva del Perú</div>
+              <div>Gerencia de Operaciones Internacionales</div>
+            </div>
+          </div>
+
+          <div class="eyebrow" id="p0-eyebrow">Capacitación</div>
+
+          <div class="title-line" id="p0-t1">Acceso al Sistema</div>
+          <div class="title-line" id="p0-t2">Datamar BI &ndash; OAS</div>
+
+          <div class="rule" id="p0-rule"></div>
+
+          <div class="sub" id="p0-sub">Cómo ingresar, navegar, filtrar y exportar reportes</div>
+        </div>
+      </div>
+
+      <script>
+        (function () {
+          const tl = gsap.timeline({ paused: true });
+
+          /* --- ambiente: respiración finita, sin repeat:-1 --- */
+          tl.fromTo(
+            "#p0-glow",
+            { scale: 0.9, opacity: 0.55 },
+            { scale: 1.06, opacity: 0.85, duration: 4.5, ease: "sine.inOut", yoyo: true, repeat: 1 },
+            0
+          );
+          tl.fromTo(
+            "#p0-glow2",
+            { scale: 1.05, opacity: 0.7 },
+            { scale: 0.92, opacity: 0.45, duration: 4.5, ease: "sine.inOut", yoyo: true, repeat: 1 },
+            0
+          );
+          tl.fromTo("#p0-mesh", { y: 0 }, { y: 48, duration: 9, ease: "none" }, 0);
+
+          /* --- waterfall-entry: cascada acelerada, opacidad binaria --- */
+          tl.fromTo(
+            "#p0-crest",
+            { autoAlpha: 0, x: -50 },
+            { autoAlpha: 1, x: 0, duration: 0.7, ease: "power3.out" },
+            0.25
+          );
+          tl.fromTo(
+            "#p0-eyebrow",
+            { autoAlpha: 0, y: 30 },
+            { autoAlpha: 1, y: 0, duration: 0.5, ease: "power2.out" },
+            0.75
+          );
+          tl.fromTo(
+            "#p0-t1",
+            { autoAlpha: 0, y: 70 },
+            { autoAlpha: 1, y: 0, duration: 0.62, ease: "power4.out" },
+            0.98
+          );
+          tl.fromTo(
+            "#p0-t2",
+            { autoAlpha: 0, y: 70 },
+            { autoAlpha: 1, y: 0, duration: 0.62, ease: "power4.out" },
+            1.16
+          );
+          tl.fromTo(
+            "#p0-rule",
+            { scaleX: 0 },
+            { scaleX: 1, duration: 0.7, ease: "power3.inOut" },
+            1.5
+          );
+          tl.fromTo(
+            "#p0-sub",
+            { autoAlpha: 0, y: 26 },
+            { autoAlpha: 1, y: 0, duration: 0.55, ease: "power2.out" },
+            1.72
+          );
+
+          /* la salida la resuelve el encadenado del timeline maestro */
+
+          window.__timelines["esc00-portada"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>

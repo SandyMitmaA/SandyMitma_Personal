@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <template>
+      <style>
+        #root {
+          position: absolute;
+          inset: 0;
+          width: 1920px;
+          height: 1080px;
+          overflow: hidden;
+          background: #f4f7fb;
+          font-family: "Montserrat", sans-serif;
+          color: #0f2b4a;
+        }
+        .bg-mesh {
+          position: absolute;
+          inset: -60px;
+          background-image: radial-gradient(rgba(13, 73, 136, 0.22) 2px, transparent 2px);
+          background-size: 48px 48px;
+          opacity: 0.55;
+        }
+        .bg-glow {
+          position: absolute;
+          top: -300px;
+          right: -240px;
+          width: 1000px;
+          height: 1000px;
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(41, 161, 230, 0.26) 0%, rgba(41, 161, 230, 0) 68%);
+        }
+        .topbar {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 1920px;
+          height: 8px;
+          background: #003366;
+          transform-origin: left center;
+        }
+        .panel {
+          position: absolute;
+          left: 0;
+          top: 8px;
+          width: 620px;
+          height: 922px;
+          padding: 132px 58px 0 110px;
+        }
+        .step {
+          font-family: "IBM Plex Mono", monospace;
+          font-weight: 700;
+          font-size: 26px;
+          letter-spacing: 0.22em;
+          color: #007dc9;
+          text-transform: uppercase;
+          margin-bottom: 26px;
+        }
+        .ptitle {
+          font-size: 58px;
+          font-weight: 900;
+          line-height: 1.1;
+          letter-spacing: -0.03em;
+          color: #003366;
+        }
+        .prule {
+          width: 120px;
+          height: 5px;
+          background: #29a1e6;
+          margin: 32px 0 28px;
+          transform-origin: left center;
+        }
+        .psub {
+          font-size: 32px;
+          font-weight: 400;
+          line-height: 1.42;
+        }
+        .cue-list {
+          margin-top: 40px;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+        }
+        .cue {
+          font-family: "IBM Plex Mono", monospace;
+          font-size: 25px;
+          font-weight: 700;
+          letter-spacing: 0.03em;
+          color: #0d4988;
+          padding-left: 26px;
+          border-left: 4px solid #29a1e6;
+          line-height: 1.3;
+        }
+        .divider {
+          position: absolute;
+          left: 620px;
+          top: 8px;
+          width: 2px;
+          height: 922px;
+          background: #c9d8e8;
+          transform-origin: top center;
+        }
+        .stage {
+          position: absolute;
+          left: 620px;
+          top: 8px;
+          width: 1300px;
+          height: 922px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .card {
+          position: relative;
+          overflow: hidden;
+          background: #ffffff;
+          border: 3px solid #c9d8e8;
+          box-shadow: 0 20px 54px rgba(0, 51, 102, 0.2);
+        }
+        .zoom {
+          position: absolute;
+          left: 0;
+          top: 0;
+          transform-origin: 0 0;
+        }
+        .zoom img {
+          display: block;
+        }
+        .spot {
+          position: absolute;
+          left: 0;
+          top: 0;
+          transform-origin: 0 0;
+          box-shadow: 0 0 0 9999px rgba(13, 73, 136, 0.4);
+        }
+      </style>
+
+      <div
+        id="root"
+        data-composition-id="esc09-superior-derecha"
+        data-width="1920"
+        data-height="1080"
+        data-duration="12"
+      >
+        <div class="bg-mesh" id="esc09-superior-derecha-mesh"></div>
+        <div class="bg-glow" id="esc09-superior-derecha-glow"></div>
+        <div class="topbar" id="esc09-superior-derecha-topbar"></div>
+
+        <div class="panel">
+          <div class="step" id="esc09-superior-derecha-step">Paso 09</div>
+          <div class="ptitle" id="esc09-superior-derecha-title">La otra ruta de exportación</div>
+          <div class="prule" id="esc09-superior-derecha-rule"></div>
+          <div class="psub" id="esc09-superior-derecha-sub">Desde el menú de la esquina superior derecha del reporte.</div>
+          <div class="cue-list">
+            <div class="cue" id="esc09-superior-derecha-cue0">Menú superior derecho</div>
+            <div class="cue" id="esc09-superior-derecha-cue1">Exportar a Excel</div>
+            <div class="cue" id="esc09-superior-derecha-cue2">Exportar Página Actual</div>
+          </div>
+        </div>
+
+        <div class="divider" id="esc09-superior-derecha-divider"></div>
+
+        <div class="stage">
+          <div class="card" id="esc09-superior-derecha-card" style="width: 968px; height: 595px">
+            <div class="zoom" id="esc09-superior-derecha-zoom" style="width: 605px; height: 372px">
+              <img src="assets/capturas/escena09_exportar_excel_pagina.png" width="605" height="372" alt="" />
+            <div class="spot" id="esc09-superior-derecha-spot" style="width: 50px; height: 39px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        (function () {
+          const tl = gsap.timeline({ paused: true });
+          tl.fromTo("#esc09-superior-derecha-mesh", { y: 0 }, { y: 40, duration: 12, ease: "none" }, 0);
+          tl.fromTo("#esc09-superior-derecha-glow", { scale: 0.94, opacity: 0.78 }, { scale: 1.06, opacity: 1, duration: 6.0, ease: "sine.inOut", yoyo: true, repeat: 1 }, 0);
+          tl.fromTo("#esc09-superior-derecha-topbar", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power3.out" }, 0);
+          tl.fromTo("#esc09-superior-derecha-divider", { scaleY: 0 }, { scaleY: 1, duration: 0.6, ease: "power2.out" }, 0.2);
+
+          /* panel izquierdo — waterfall-entry */
+          tl.fromTo("#esc09-superior-derecha-step", { autoAlpha: 0, x: -34 }, { autoAlpha: 1, x: 0, duration: 0.45, ease: "power2.out" }, 0.15);
+          tl.fromTo("#esc09-superior-derecha-title", { autoAlpha: 0, y: 44 }, { autoAlpha: 1, y: 0, duration: 0.6, ease: "power4.out" }, 0.3);
+          tl.fromTo("#esc09-superior-derecha-rule", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power3.inOut" }, 0.62);
+          tl.fromTo("#esc09-superior-derecha-sub", { autoAlpha: 0, y: 24 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: "power2.out" }, 0.75);
+
+          /* ficha — spring-pop-entrance */
+          tl.fromTo("#esc09-superior-derecha-card", { autoAlpha: 0, scale: 0.955, y: 26 }, { autoAlpha: 1, scale: 1, y: 0, duration: 0.72, ease: "back.out(1.4)" }, 0.5);
+
+          /* cámara — coordinate-target-zoom */
+          tl.set("#esc09-superior-derecha-zoom", { scale: 1.6, x: 0.0, y: -0.1 }, 0);
+
+          /* reflector — un solo foco que recorre la pantalla */
+          tl.set("#esc09-superior-derecha-spot", { x: 516, y: 56, scaleX: 1, scaleY: 1 }, 0);
+          tl.fromTo("#esc09-superior-derecha-spot", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.5, ease: "power2.out" }, 2.2);
+          tl.to("#esc09-superior-derecha-spot", { x: 297, y: 138, scaleX: 5.18, scaleY: 0.8462, duration: 0.55, ease: "power2.inOut" }, 5.6);
+          tl.to("#esc09-superior-derecha-spot", { x: 47, y: 140, scaleX: 4.94, scaleY: 0.8462, duration: 0.55, ease: "power2.inOut" }, 8.4);
+          tl.to("#esc09-superior-derecha-spot", { autoAlpha: 0, duration: 0.45, ease: "power2.in" }, 11.5);
+          tl.fromTo("#esc09-superior-derecha-cue0", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 1.3000000000000003);
+          tl.to("#esc09-superior-derecha-cue0", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 2.2);
+          tl.to("#esc09-superior-derecha-cue0", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 5.6);
+          tl.fromTo("#esc09-superior-derecha-cue1", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 4.699999999999999);
+          tl.to("#esc09-superior-derecha-cue1", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 5.6);
+          tl.to("#esc09-superior-derecha-cue1", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 8.4);
+          tl.fromTo("#esc09-superior-derecha-cue2", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 7.5);
+          tl.to("#esc09-superior-derecha-cue2", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 8.4);
+
+          window.__timelines["esc09-superior-derecha"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="es-PE">
+  <voice name="es-PE-CamilaNeural">
+    <prosody rate="-8%">
+      En la ventana se mostrará la pantalla de login.
+      Aquí deberás ingresar tus credenciales: usuario y contraseña.
+    </prosody>
+  </voice>
+</speak>

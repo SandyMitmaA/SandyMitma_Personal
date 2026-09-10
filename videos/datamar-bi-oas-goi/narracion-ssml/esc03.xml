@@ -1,0 +1,9 @@
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="es-PE">
+  <voice name="es-PE-CamilaNeural">
+    <prosody rate="-8%">
+      Esto nos dirigirá a la ventana principal, Overview, donde se muestran los diversos dashboards y reportes disponibles, agrupados por área temática.
+      Por ejemplo:
+      Portafolio y Contrapartes, o Indicadores de Desempeño, entre otros.
+    </prosody>
+  </voice>
+</speak>

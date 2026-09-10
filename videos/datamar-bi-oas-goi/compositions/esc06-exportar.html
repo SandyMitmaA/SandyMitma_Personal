@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <template>
+      <style>
+        #root {
+          position: absolute;
+          inset: 0;
+          width: 1920px;
+          height: 1080px;
+          overflow: hidden;
+          background: #f4f7fb;
+          font-family: "Montserrat", sans-serif;
+          color: #0f2b4a;
+        }
+        .bg-mesh {
+          position: absolute;
+          inset: -60px;
+          background-image: radial-gradient(rgba(13, 73, 136, 0.22) 2px, transparent 2px);
+          background-size: 48px 48px;
+          opacity: 0.55;
+        }
+        .bg-glow {
+          position: absolute;
+          top: -300px;
+          right: -240px;
+          width: 1000px;
+          height: 1000px;
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(41, 161, 230, 0.26) 0%, rgba(41, 161, 230, 0) 68%);
+        }
+        .topbar {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 1920px;
+          height: 8px;
+          background: #003366;
+          transform-origin: left center;
+        }
+        .panel {
+          position: absolute;
+          left: 0;
+          top: 8px;
+          width: 620px;
+          height: 922px;
+          padding: 132px 58px 0 110px;
+        }
+        .step {
+          font-family: "IBM Plex Mono", monospace;
+          font-weight: 700;
+          font-size: 26px;
+          letter-spacing: 0.22em;
+          color: #007dc9;
+          text-transform: uppercase;
+          margin-bottom: 26px;
+        }
+        .ptitle {
+          font-size: 58px;
+          font-weight: 900;
+          line-height: 1.1;
+          letter-spacing: -0.03em;
+          color: #003366;
+        }
+        .prule {
+          width: 120px;
+          height: 5px;
+          background: #29a1e6;
+          margin: 32px 0 28px;
+          transform-origin: left center;
+        }
+        .psub {
+          font-size: 32px;
+          font-weight: 400;
+          line-height: 1.42;
+        }
+        .cue-list {
+          margin-top: 40px;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+        }
+        .cue {
+          font-family: "IBM Plex Mono", monospace;
+          font-size: 25px;
+          font-weight: 700;
+          letter-spacing: 0.03em;
+          color: #0d4988;
+          padding-left: 26px;
+          border-left: 4px solid #29a1e6;
+          line-height: 1.3;
+        }
+        .divider {
+          position: absolute;
+          left: 620px;
+          top: 8px;
+          width: 2px;
+          height: 922px;
+          background: #c9d8e8;
+          transform-origin: top center;
+        }
+        .stage {
+          position: absolute;
+          left: 620px;
+          top: 8px;
+          width: 1300px;
+          height: 922px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .card {
+          position: relative;
+          overflow: hidden;
+          background: #ffffff;
+          border: 3px solid #c9d8e8;
+          box-shadow: 0 20px 54px rgba(0, 51, 102, 0.2);
+        }
+        .zoom {
+          position: absolute;
+          left: 0;
+          top: 0;
+          transform-origin: 0 0;
+        }
+        .zoom img {
+          display: block;
+        }
+        .spot {
+          position: absolute;
+          left: 0;
+          top: 0;
+          transform-origin: 0 0;
+          box-shadow: 0 0 0 9999px rgba(13, 73, 136, 0.4);
+        }
+      </style>
+
+      <div
+        id="root"
+        data-composition-id="esc06-exportar"
+        data-width="1920"
+        data-height="1080"
+        data-duration="8"
+      >
+        <div class="bg-mesh" id="esc06-exportar-mesh"></div>
+        <div class="bg-glow" id="esc06-exportar-glow"></div>
+        <div class="topbar" id="esc06-exportar-topbar"></div>
+
+        <div class="panel">
+          <div class="step" id="esc06-exportar-step">Paso 06</div>
+          <div class="ptitle" id="esc06-exportar-title">Dónde está la opción de exportar</div>
+          <div class="prule" id="esc06-exportar-rule"></div>
+          <div class="psub" id="esc06-exportar-sub">Al pie del reporte aparece el enlace Exportar.</div>
+          <div class="cue-list">
+            <div class="cue" id="esc06-exportar-cue0">Exportar</div>
+          </div>
+        </div>
+
+        <div class="divider" id="esc06-exportar-divider"></div>
+
+        <div class="stage">
+          <div class="card" id="esc06-exportar-card" style="width: 1022px; height: 322px">
+            <div class="zoom" id="esc06-exportar-zoom" style="width: 292px; height: 92px">
+              <img src="assets/capturas/escena06_opcion_exportar.png" width="292" height="92" alt="" />
+            <div class="spot" id="esc06-exportar-spot" style="width: 89px; height: 43px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        (function () {
+          const tl = gsap.timeline({ paused: true });
+          tl.fromTo("#esc06-exportar-mesh", { y: 0 }, { y: 40, duration: 8, ease: "none" }, 0);
+          tl.fromTo("#esc06-exportar-glow", { scale: 0.94, opacity: 0.78 }, { scale: 1.06, opacity: 1, duration: 4.0, ease: "sine.inOut", yoyo: true, repeat: 1 }, 0);
+          tl.fromTo("#esc06-exportar-topbar", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power3.out" }, 0);
+          tl.fromTo("#esc06-exportar-divider", { scaleY: 0 }, { scaleY: 1, duration: 0.6, ease: "power2.out" }, 0.2);
+
+          /* panel izquierdo — waterfall-entry */
+          tl.fromTo("#esc06-exportar-step", { autoAlpha: 0, x: -34 }, { autoAlpha: 1, x: 0, duration: 0.45, ease: "power2.out" }, 0.15);
+          tl.fromTo("#esc06-exportar-title", { autoAlpha: 0, y: 44 }, { autoAlpha: 1, y: 0, duration: 0.6, ease: "power4.out" }, 0.3);
+          tl.fromTo("#esc06-exportar-rule", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power3.inOut" }, 0.62);
+          tl.fromTo("#esc06-exportar-sub", { autoAlpha: 0, y: 24 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: "power2.out" }, 0.75);
+
+          /* ficha — spring-pop-entrance */
+          tl.fromTo("#esc06-exportar-card", { autoAlpha: 0, scale: 0.955, y: 26 }, { autoAlpha: 1, scale: 1, y: 0, duration: 0.72, ease: "back.out(1.4)" }, 0.5);
+
+          /* cámara — coordinate-target-zoom */
+          tl.set("#esc06-exportar-zoom", { scale: 3.5, x: 0.0, y: 0.0 }, 0);
+
+          /* reflector — un solo foco que recorre la pantalla */
+          tl.set("#esc06-exportar-spot", { x: 145, y: 33, scaleX: 1, scaleY: 1 }, 0);
+          tl.fromTo("#esc06-exportar-spot", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.5, ease: "power2.out" }, 2.8);
+          tl.to("#esc06-exportar-spot", { autoAlpha: 0, duration: 0.45, ease: "power2.in" }, 7.5);
+          tl.fromTo("#esc06-exportar-cue0", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 1.9);
+          tl.to("#esc06-exportar-cue0", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 2.8);
+
+          window.__timelines["esc06-exportar"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>

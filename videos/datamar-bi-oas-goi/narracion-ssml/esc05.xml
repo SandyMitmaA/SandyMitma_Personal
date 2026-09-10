@@ -1,0 +1,9 @@
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="es-PE">
+  <voice name="es-PE-CamilaNeural">
+    <prosody rate="-8%">
+      Aquí se mostrará el reporte.
+      En la parte lateral izquierda encontramos un panel con los filtros disponibles: frecuencia, ya sea diaria, mensual o anual; fecha o rango de fecha; moneda; instrumento; metodología de consulta; y si se desea ver el reporte a nivel de tramo o moneda.
+      Finalmente, se debe presionar Aplicar.
+    </prosody>
+  </voice>
+</speak>

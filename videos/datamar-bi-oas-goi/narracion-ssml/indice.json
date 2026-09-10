@@ -1,0 +1,74 @@
+[
+  {
+    "escena": "esc00",
+    "titulo": "Portada",
+    "palabras": 18,
+    "seg_estimados": 7.3
+  },
+  {
+    "escena": "esc01",
+    "titulo": "Acceso a la plataforma",
+    "palabras": 10,
+    "seg_estimados": 4.1
+  },
+  {
+    "escena": "esc02",
+    "titulo": "Ventana de login",
+    "palabras": 17,
+    "seg_estimados": 6.9
+  },
+  {
+    "escena": "esc03",
+    "titulo": "Página principal Overview",
+    "palabras": 32,
+    "seg_estimados": 13.0
+  },
+  {
+    "escena": "esc04",
+    "titulo": "Acceder a un reporte",
+    "palabras": 23,
+    "seg_estimados": 9.3
+  },
+  {
+    "escena": "esc05",
+    "titulo": "Panel de filtros",
+    "palabras": 52,
+    "seg_estimados": 21.1
+  },
+  {
+    "escena": "esc06",
+    "titulo": "Opción de exportar",
+    "palabras": 14,
+    "seg_estimados": 5.7
+  },
+  {
+    "escena": "esc07",
+    "titulo": "Exportar Con Formato",
+    "palabras": 24,
+    "seg_estimados": 9.7
+  },
+  {
+    "escena": "esc08",
+    "titulo": "Exportar Datos",
+    "palabras": 17,
+    "seg_estimados": 6.9
+  },
+  {
+    "escena": "esc09",
+    "titulo": "Otra forma de exportar",
+    "palabras": 21,
+    "seg_estimados": 8.5
+  },
+  {
+    "escena": "esc10",
+    "titulo": "Regresar a la página principal",
+    "palabras": 19,
+    "seg_estimados": 7.7
+  },
+  {
+    "escena": "esc11",
+    "titulo": "Cierre",
+    "palabras": 30,
+    "seg_estimados": 12.2
+  }
+]

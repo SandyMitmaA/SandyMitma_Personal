@@ -1,0 +1,7 @@
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="es-PE">
+  <voice name="es-PE-CamilaNeural">
+    <prosody rate="-8%">
+      Si se requiere regresar a la página principal, nos dirigimos a Panel de Control y hacemos clic en Overview.
+    </prosody>
+  </voice>
+</speak>

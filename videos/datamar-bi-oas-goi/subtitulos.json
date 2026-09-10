@@ -1,0 +1,173 @@
+{
+  "duracion_total": 148.5,
+  "subtitulos": [
+    {
+      "escena": "esc00-portada",
+      "texto": "Bienvenidos a esta capacitación sobre el acceso al Sistema Datamar BI – OAS,",
+      "inicio": 0.6,
+      "duracion": 5.27
+    },
+    {
+      "escena": "esc00-portada",
+      "texto": "de la Gerencia de Operaciones Internacionales.",
+      "inicio": 5.87,
+      "duracion": 2.43
+    },
+    {
+      "escena": "esc01-link",
+      "texto": "Para acceder a la plataforma, debemos ingresar al siguiente link.",
+      "inicio": 10.1,
+      "duracion": 4.05
+    },
+    {
+      "escena": "esc02-login",
+      "texto": "En la ventana se mostrará la pantalla de login.",
+      "inicio": 17.1,
+      "duracion": 3.65
+    },
+    {
+      "escena": "esc02-login",
+      "texto": "Aquí deberás ingresar tus credenciales: usuario y contraseña.",
+      "inicio": 20.75,
+      "duracion": 3.24
+    },
+    {
+      "escena": "esc03-overview",
+      "texto": "Esto nos dirigirá a la ventana principal, Overview,",
+      "inicio": 27.1,
+      "duracion": 3.24
+    },
+    {
+      "escena": "esc03-overview",
+      "texto": "donde se muestran los diversos dashboards y reportes disponibles, agrupados por área temática.",
+      "inicio": 30.34,
+      "duracion": 5.27
+    },
+    {
+      "escena": "esc03-overview",
+      "texto": "Por ejemplo: Portafolio y Contrapartes, o Indicadores de Desempeño, entre otros.",
+      "inicio": 35.61,
+      "duracion": 4.46
+    },
+    {
+      "escena": "esc04-abrir-reporte",
+      "texto": "Si se requiere consultar alguno de estos reportes, solo es necesario dar clic para acceder.",
+      "inicio": 43.1,
+      "duracion": 6.08
+    },
+    {
+      "escena": "esc04-abrir-reporte",
+      "texto": "Por ejemplo, el reporte de Portafolio vs Referencia.",
+      "inicio": 49.18,
+      "duracion": 3.24
+    },
+    {
+      "escena": "esc05-filtros",
+      "texto": "Aquí se mostrará el reporte.",
+      "inicio": 55.1,
+      "duracion": 2.03
+    },
+    {
+      "escena": "esc05-filtros",
+      "texto": "En la parte lateral izquierda encontramos un panel con los filtros disponibles:",
+      "inicio": 57.13,
+      "duracion": 4.86
+    },
+    {
+      "escena": "esc05-filtros",
+      "texto": "frecuencia, ya sea diaria, mensual o anual;",
+      "inicio": 61.99,
+      "duracion": 2.84
+    },
+    {
+      "escena": "esc05-filtros",
+      "texto": "fecha o rango de fecha; moneda; instrumento;",
+      "inicio": 64.83,
+      "duracion": 2.84
+    },
+    {
+      "escena": "esc05-filtros",
+      "texto": "metodología de consulta;",
+      "inicio": 67.67,
+      "duracion": 1.22
+    },
+    {
+      "escena": "esc05-filtros",
+      "texto": "y si se desea ver el reporte a nivel de tramo o moneda.",
+      "inicio": 68.88,
+      "duracion": 5.27
+    },
+    {
+      "escena": "esc05-filtros",
+      "texto": "Finalmente, se debe presionar Aplicar.",
+      "inicio": 74.15,
+      "duracion": 2.03
+    },
+    {
+      "escena": "esc06-exportar",
+      "texto": "Para exportar los resultados, en la parte inferior se mostrará la opción de exportar.",
+      "inicio": 80.1,
+      "duracion": 5.68
+    },
+    {
+      "escena": "esc07-con-formato",
+      "texto": "Al hacer clic se mostrarán los distintos formatos disponibles.",
+      "inicio": 88.1,
+      "duracion": 3.65
+    },
+    {
+      "escena": "esc07-con-formato",
+      "texto": "Con la opción Con Formato, se puede exportar en PDF, Excel, PowerPoint o archivo web.",
+      "inicio": 91.75,
+      "duracion": 6.08
+    },
+    {
+      "escena": "esc08-datos",
+      "texto": "Con la otra opción, Datos, se podrá exportar en formatos Excel, CSV,",
+      "inicio": 101.1,
+      "duracion": 4.86
+    },
+    {
+      "escena": "esc08-datos",
+      "texto": "delimitado por tabulaciones, y XML.",
+      "inicio": 105.96,
+      "duracion": 2.03
+    },
+    {
+      "escena": "esc09-superior-derecha",
+      "texto": "Otra manera de exportar es dando clic en la parte superior derecha,",
+      "inicio": 111.1,
+      "duracion": 4.86
+    },
+    {
+      "escena": "esc09-superior-derecha",
+      "texto": "en Exportar a Excel, o en Exportar Página Actual.",
+      "inicio": 115.96,
+      "duracion": 3.65
+    },
+    {
+      "escena": "esc10-regresar",
+      "texto": "Si se requiere regresar a la página principal,",
+      "inicio": 123.1,
+      "duracion": 3.24
+    },
+    {
+      "escena": "esc10-regresar",
+      "texto": "nos dirigimos a Panel de Control y hacemos clic en Overview.",
+      "inicio": 126.34,
+      "duracion": 4.46
+    },
+    {
+      "escena": "esc11-cierre",
+      "texto": "De esta manera podrás interactuar con los diversos reportes disponibles que existen en el OAS.",
+      "inicio": 134.1,
+      "duracion": 6.08
+    },
+    {
+      "escena": "esc11-cierre",
+      "texto": "Con esto, ya conoces cómo acceder, navegar, filtrar y exportar reportes en Datamar BI OAS.",
+      "inicio": 140.18,
+      "duracion": 6.08
+    }
+  ]
+}

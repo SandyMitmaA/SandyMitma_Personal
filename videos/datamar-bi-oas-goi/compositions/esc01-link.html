@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <template>
+      <style>
+        #root {
+          position: absolute;
+          inset: 0;
+          width: 1920px;
+          height: 1080px;
+          overflow: hidden;
+          background: #f4f7fb;
+          font-family: "Montserrat", sans-serif;
+          color: #0f2b4a;
+        }
+        .bg-mesh {
+          position: absolute;
+          inset: -60px;
+          background-image: radial-gradient(rgba(13, 73, 136, 0.22) 2px, transparent 2px);
+          background-size: 48px 48px;
+          opacity: 0.55;
+        }
+        .bg-glow {
+          position: absolute;
+          top: -300px;
+          right: -240px;
+          width: 1000px;
+          height: 1000px;
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(41, 161, 230, 0.28) 0%, rgba(41, 161, 230, 0) 68%);
+        }
+        .topbar {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 1920px;
+          height: 8px;
+          background: #003366;
+          transform-origin: left center;
+        }
+        .panel {
+          position: absolute;
+          left: 0;
+          top: 8px;
+          width: 620px;
+          height: 922px;
+          padding: 150px 62px 0 110px;
+        }
+        .step {
+          font-family: "IBM Plex Mono", monospace;
+          font-weight: 700;
+          font-size: 26px;
+          letter-spacing: 0.22em;
+          color: #007dc9;
+          text-transform: uppercase;
+          margin-bottom: 26px;
+        }
+        .ptitle {
+          font-size: 62px;
+          font-weight: 900;
+          line-height: 1.1;
+          letter-spacing: -0.03em;
+          color: #003366;
+        }
+        .prule {
+          width: 120px;
+          height: 5px;
+          background: #29a1e6;
+          margin: 34px 0 30px;
+          transform-origin: left center;
+        }
+        .psub {
+          font-size: 34px;
+          font-weight: 400;
+          line-height: 1.42;
+        }
+        .divider {
+          position: absolute;
+          left: 620px;
+          top: 8px;
+          width: 2px;
+          height: 922px;
+          background: #c9d8e8;
+          transform-origin: top center;
+        }
+        .stage {
+          position: absolute;
+          left: 620px;
+          top: 8px;
+          width: 1300px;
+          height: 922px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 60px 90px;
+        }
+
+        /* barra de navegador reconstruida */
+        .browser {
+          width: 1080px;
+          background: #ffffff;
+          border: 2px solid #c9d8e8;
+          box-shadow: 0 18px 50px rgba(0, 51, 102, 0.18);
+        }
+        .browser-chrome {
+          height: 62px;
+          background: #eef3f9;
+          border-bottom: 2px solid #c9d8e8;
+          display: flex;
+          align-items: center;
+          padding: 0 26px;
+          gap: 14px;
+        }
+        .dot {
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          background: #c9d8e8;
+        }
+        .browser-bar {
+          padding: 34px 40px 38px;
+        }
+        .url-row {
+          display: flex;
+          align-items: center;
+          gap: 22px;
+          border: 3px solid #0d4988;
+          border-radius: 999px;
+          padding: 22px 34px;
+        }
+        .lock {
+          width: 26px;
+          height: 26px;
+          border: 3px solid #007dc9;
+          border-radius: 6px;
+          flex: 0 0 auto;
+        }
+        .url {
+          font-family: "IBM Plex Mono", monospace;
+          font-weight: 700;
+          font-size: 44px;
+          color: #003366;
+          letter-spacing: -0.01em;
+          white-space: nowrap;
+        }
+        .url-underline {
+          height: 6px;
+          background: #29a1e6;
+          margin: 22px 0 0 34px;
+          width: 812px;
+          transform-origin: left center;
+        }
+        .hint {
+          font-family: "IBM Plex Mono", monospace;
+          font-size: 28px;
+          color: #0d4988;
+          letter-spacing: 0.12em;
+          margin: 30px 0 0 34px;
+          text-transform: uppercase;
+        }
+      </style>
+
+      <div
+        id="root"
+        data-composition-id="esc01-link"
+        data-width="1920"
+        data-height="1080"
+        data-duration="7"
+      >
+        <div class="bg-mesh" id="s1-mesh"></div>
+        <div class="bg-glow" id="s1-glow"></div>
+        <div class="topbar" id="s1-topbar"></div>
+
+        <div class="panel">
+          <div class="step" id="s1-step">Paso 01</div>
+          <div class="ptitle" id="s1-title">Ingresa al link de acceso</div>
+          <div class="prule" id="s1-rule"></div>
+          <div class="psub" id="s1-sub">Escribe la dirección en tu navegador para abrir la plataforma.</div>
+        </div>
+
+        <div class="divider" id="s1-divider"></div>
+
+        <div class="stage">
+          <div class="browser" id="s1-browser">
+            <div class="browser-chrome">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            <div class="browser-bar">
+              <div class="url-row">
+                <div class="lock"></div>
+                <div class="url">oasgoi.bcrp.gob:9502/analytics/</div>
+              </div>
+              <div class="url-underline" id="s1-underline"></div>
+              <div class="hint" id="s1-hint">Dirección de acceso</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        (function () {
+          const tl = gsap.timeline({ paused: true });
+
+          tl.fromTo("#s1-mesh", { y: 0 }, { y: 40, duration: 7, ease: "none" }, 0);
+          tl.fromTo(
+            "#s1-glow",
+            { scale: 0.94, opacity: 0.8 },
+            { scale: 1.05, opacity: 1, duration: 3.5, ease: "sine.inOut", yoyo: true, repeat: 1 },
+            0
+          );
+
+          tl.fromTo("#s1-topbar", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power3.out" }, 0);
+          tl.fromTo("#s1-divider", { scaleY: 0 }, { scaleY: 1, duration: 0.6, ease: "power2.out" }, 0.2);
+
+          tl.fromTo("#s1-step", { autoAlpha: 0, x: -34 }, { autoAlpha: 1, x: 0, duration: 0.45, ease: "power2.out" }, 0.15);
+          tl.fromTo("#s1-title", { autoAlpha: 0, y: 44 }, { autoAlpha: 1, y: 0, duration: 0.6, ease: "power4.out" }, 0.3);
+          tl.fromTo("#s1-rule", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power3.inOut" }, 0.62);
+          tl.fromTo("#s1-sub", { autoAlpha: 0, y: 24 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: "power2.out" }, 0.75);
+
+          /* spring-pop-entrance sobre la barra */
+          tl.fromTo(
+            "#s1-browser",
+            { autoAlpha: 0, scale: 0.9, y: 30 },
+            { autoAlpha: 1, scale: 1, y: 0, duration: 0.7, ease: "back.out(1.6)" },
+            0.55
+          );
+          /* svg-path-draw en forma de trazo: subrayado que se dibuja */
+          tl.fromTo("#s1-underline", { scaleX: 0 }, { scaleX: 1, duration: 0.9, ease: "power2.inOut" }, 1.5);
+          tl.fromTo("#s1-hint", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.4, ease: "power2.out" }, 2.2);
+
+          window.__timelines["esc01-link"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>
