@@ -46,11 +46,21 @@ del contenido; este proyecto no inventa pasos ni afirma nada que el guion no dig
   El texto listo para sintetizar está en `NARRACION.md` y en `narracion-ssml/`.
   El video se construye primero con las duraciones estimadas del guion y se
   re-sincroniza contra el audio real cuando llegue.
-- **Dos versiones de audio.** El proyecto produce una versión por voz: la de
-  Camila y una segunda grabación que aportará la usuaria. Cada voz vive en su
-  carpeta (`assets/audio/<voz>/esc00…esc11`) y se arma con
-  `python3 tools/sincronizar.py --voz <voz>`. Como cada voz tiene su propio
-  ritmo, las duraciones finales difieren entre versiones.
+- **Tres cortes.** El proyecto produce uno por banda sonora, y cada uno tiene su
+  propia duración porque cada lectura tiene su propio ritmo:
+
+  | Corte | Audio | Portada | Duración |
+  |---|---|---|---|
+  | A | voz de Camila (TTS) + música | «Acceso al **Sistema**» | 2:56 |
+  | B | solo música | «Acceso a la **Solución**» | 2:56 |
+  | C | voz de Sandy (grabada) + música | «Acceso a la **Solución**» | 3:14 |
+
+  La palabra del titular sigue siempre a lo que se oye: Camila pronuncia
+  «Sistema», Sandy pronuncia «Solución», y el corte mudo no contradice a nadie.
+
+  Cada voz vive en `assets/audio/<voz>/esc00…esc11`. Se arma con
+  `tools/sincronizar.py --voz <voz> [--texto solucion] [--sin-voz]`, después de
+  reescalar la coreografía con `tools/generar-escenas.py --voz <voz>`.
 - **Subtítulos** en la franja inferior, sincronizados con la narración.
 - **Cursor animado** en la escena 4, donde el guion pide mostrar el clic sobre el reporte.
 - **Resaltado secuencial** de los filtros en la escena 5 y de los formatos de

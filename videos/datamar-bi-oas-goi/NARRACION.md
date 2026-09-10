@@ -51,6 +51,12 @@ encabezados: son referencia para ti.
 
 > Bienvenidos a esta capacitación sobre el acceso al Sistema Datamart BI, OAS, de la Gerencia de Operaciones Internacionales.
 
+> ℹ **La grabación de Sandy dice «Solución», no «Sistema».** Este documento
+> conserva «Sistema» porque es el guion con el que se sintetizó la voz de
+> Camila, y cambiarlo dejaría esa versión describiendo algo que su propio audio
+> no dice. Cada corte usa en pantalla la palabra que se oye en él: «Sistema» en
+> la versión de Camila, «Solución» en la de Sandy y en la muda.
+
 ### Escena 1 — Acceso a la plataforma
 
 > Para acceder a la plataforma, debemos ingresar al siguiente link.
