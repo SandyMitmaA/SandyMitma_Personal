@@ -6,3 +6,8 @@ videos/*/.hyperframes/
 videos/*/out/
 videos/*/renders/
 videos/*/node_modules/
+
+# Audio derivado: se regenera desde narracion-ssml/ con las herramientas de tools/
+# (partir-audio.py, pulir-audio.py, preparar-cama.py). No versionar decenas de MB
+# que salen de un comando.
+videos/*/assets/audio/*/
