@@ -150,7 +150,7 @@ def audio_duration(path):
     raise RuntimeError(f"No se pudo medir la duración de {path}")
 
 
-def build(voz=None):
+def build(voz=None, sin_voz=False):
     tracks, have_audio = [], False
     for slug, cid, src, lines in SCENES:
         path = find_audio(slug, voz)
@@ -171,6 +171,16 @@ def build(voz=None):
         starts.append(round(t, 2))
         t += tr["dur"]
     total = round(t, 2)
+
+    if sin_voz:
+        # Sin locución que contradecir, el área prefiere «Solución» a «Sistema».
+        # La portada es otro archivo porque el titular va grabado en la imagen.
+        tracks[0]["src"] = "compositions/esc00-portada-solucion.html"
+        tracks[0]["cid"] = "esc00-portada-solucion"
+        tracks[0]["lines"] = [
+            "Bienvenidos a esta capacitación sobre el acceso a la Solución",
+            "Datamart BI – OAS, de la Gerencia de Operaciones Internacionales.",
+        ]
 
     hosts, caps, auds, tweens, index = [], [], [], [], []
     for i, tr in enumerate(tracks):
@@ -198,7 +208,7 @@ def build(voz=None):
             tweens.append(f'      tl.to("#host-{prev}", {{ opacity: 0, duration: {XFADE}, '
                           f'ease: "power1.inOut" }}, {st:g});')
 
-        if tr["audio"]:
+        if tr["audio"] and not sin_voz:
             rel = os.path.relpath(tr["audio"], ROOT).replace(os.sep, "/")
             auds.append(
                 f'      <audio id="vo-{tr["slug"]}" src="{rel}" data-start="{round(st + LEAD, 2)}" '
@@ -225,11 +235,12 @@ def build(voz=None):
     # voz NO se hace aquí a mano: lo escribe el voiceover carve del framework
     # (scripts/carve.mjs), que abre hueco por bandas en vez de bajar el volumen
     # entero — así la música conserva graves y aire mientras la voz se entiende.
-    cama = os.path.join(ROOT, "assets", "audio", "musica", "cama.wav")
+    archivo_cama = "cama-sola.wav" if sin_voz else "cama.wav"
+    cama = os.path.join(ROOT, "assets", "audio", "musica", archivo_cama)
     if os.path.isfile(cama):
         audio_block += (
             '\n\n      <!-- cama musical -->\n'
-            f'      <audio id="music-bed" src="assets/audio/musica/cama.wav" '
+            f'      <audio id="music-bed" src="assets/audio/musica/{archivo_cama}" '
             f'data-start="0" data-duration="{total:g}" data-track-index="7" '
             f'data-audio-group="music" data-volume="1"></audio>'
         )
@@ -322,7 +333,7 @@ def build(voz=None):
     m, s = divmod(total, 60)
     print(f"\nTotal: {total:.1f} s = {int(m)}:{int(s):02d}   ·   {len(index)} subtítulos")
     faltan = [t["slug"] for t in tracks if not t["audio"]]
-    if os.path.isfile(cama):
+    if os.path.isfile(cama) and not sin_voz:
         print("\n⚠ Este script reescribe index.html, así que se llevó por delante el")
         print("  voiceover carve de la cama musical. Vuelve a aplicarlo:")
         print("      node <skills>/hyperframes-audio/scripts/carve.mjs --comp index.html")
@@ -343,6 +354,10 @@ def main():
     ap = argparse.ArgumentParser(description="Sincroniza el video con una narración.")
     ap.add_argument("--voz", help="carpeta bajo assets/audio/ con los doce archivos")
     ap.add_argument("--listar", action="store_true", help="lista las voces disponibles")
+    ap.add_argument("--sin-voz", action="store_true", dest="sin_voz",
+                    help="corte sin locución: conserva los tiempos de --voz pero no monta "
+                         "las pistas de voz, usa la cama a rango completo y dice "
+                         "«Solución» donde la versión narrada dice «Sistema»")
     a = ap.parse_args()
 
     disponibles = voces_disponibles()
@@ -363,7 +378,7 @@ def main():
             print("Disponibles: " + ", ".join(n for n, _ in disponibles))
         return 1
 
-    return build(a.voz)
+    return build(a.voz, a.sin_voz)
 
 
 if __name__ == "__main__":

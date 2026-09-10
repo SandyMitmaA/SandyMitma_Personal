@@ -2,16 +2,16 @@
   "duracion_total": 176.86,
   "subtitulos": [
     {
-      "escena": "esc00-portada",
-      "texto": "Bienvenidos a esta capacitación sobre el acceso al Sistema",
+      "escena": "esc00-portada-solucion",
+      "texto": "Bienvenidos a esta capacitación sobre el acceso a la Solución",
       "inicio": 0.6,
-      "duracion": 4.75
+      "duracion": 5.02
     },
     {
-      "escena": "esc00-portada",
+      "escena": "esc00-portada-solucion",
       "texto": "Datamart BI – OAS, de la Gerencia de Operaciones Internacionales.",
-      "inicio": 5.35,
-      "duracion": 5.28
+      "inicio": 5.62,
+      "duracion": 5.02
     },
     {
       "escena": "esc01-link",
