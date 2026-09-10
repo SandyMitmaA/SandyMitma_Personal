@@ -142,7 +142,7 @@
         data-composition-id="esc09-superior-derecha"
         data-width="1920"
         data-height="1080"
-        data-duration="13.48"
+        data-duration="12"
       >
         <div class="bg-mesh" id="esc09-superior-derecha-mesh"></div>
         <div class="bg-glow" id="esc09-superior-derecha-glow"></div>
@@ -175,8 +175,8 @@
       <script>
         (function () {
           const tl = gsap.timeline({ paused: true });
-          tl.fromTo("#esc09-superior-derecha-mesh", { y: 0 }, { y: 40, duration: 13.48, ease: "none" }, 0);
-          tl.fromTo("#esc09-superior-derecha-glow", { scale: 0.94, opacity: 0.78 }, { scale: 1.06, opacity: 1, duration: 6.74, ease: "sine.inOut", yoyo: true, repeat: 1 }, 0);
+          tl.fromTo("#esc09-superior-derecha-mesh", { y: 0 }, { y: 40, duration: 12, ease: "none" }, 0);
+          tl.fromTo("#esc09-superior-derecha-glow", { scale: 0.94, opacity: 0.78 }, { scale: 1.06, opacity: 1, duration: 6.0, ease: "sine.inOut", yoyo: true, repeat: 1 }, 0);
           tl.fromTo("#esc09-superior-derecha-topbar", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power3.out" }, 0);
           tl.fromTo("#esc09-superior-derecha-divider", { scaleY: 0 }, { scaleY: 1, duration: 0.6, ease: "power2.out" }, 0.2);
 
@@ -194,18 +194,18 @@
 
           /* reflector — un solo foco que recorre la pantalla */
           tl.set("#esc09-superior-derecha-spot", { x: 516, y: 56, scaleX: 1, scaleY: 1 }, 0);
-          tl.fromTo("#esc09-superior-derecha-spot", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.5, ease: "power2.out" }, 2.47);
-          tl.to("#esc09-superior-derecha-spot", { x: 297, y: 138, scaleX: 5.18, scaleY: 0.8462, duration: 0.55, ease: "power2.inOut" }, 6.29);
-          tl.to("#esc09-superior-derecha-spot", { x: 47, y: 140, scaleX: 4.94, scaleY: 0.8462, duration: 0.55, ease: "power2.inOut" }, 9.44);
-          tl.to("#esc09-superior-derecha-spot", { autoAlpha: 0, duration: 0.45, ease: "power2.in" }, 12.98);
-          tl.fromTo("#esc09-superior-derecha-cue0", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 1.5700000000000003);
-          tl.to("#esc09-superior-derecha-cue0", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 2.47);
-          tl.to("#esc09-superior-derecha-cue0", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 6.29);
-          tl.fromTo("#esc09-superior-derecha-cue1", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 5.39);
-          tl.to("#esc09-superior-derecha-cue1", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 6.29);
-          tl.to("#esc09-superior-derecha-cue1", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 9.44);
-          tl.fromTo("#esc09-superior-derecha-cue2", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 8.54);
-          tl.to("#esc09-superior-derecha-cue2", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 9.44);
+          tl.fromTo("#esc09-superior-derecha-spot", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.5, ease: "power2.out" }, 2.2);
+          tl.to("#esc09-superior-derecha-spot", { x: 297, y: 138, scaleX: 5.18, scaleY: 0.8462, duration: 0.55, ease: "power2.inOut" }, 5.6);
+          tl.to("#esc09-superior-derecha-spot", { x: 47, y: 140, scaleX: 4.94, scaleY: 0.8462, duration: 0.55, ease: "power2.inOut" }, 8.4);
+          tl.to("#esc09-superior-derecha-spot", { autoAlpha: 0, duration: 0.45, ease: "power2.in" }, 11.5);
+          tl.fromTo("#esc09-superior-derecha-cue0", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 1.3000000000000003);
+          tl.to("#esc09-superior-derecha-cue0", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 2.2);
+          tl.to("#esc09-superior-derecha-cue0", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 5.6);
+          tl.fromTo("#esc09-superior-derecha-cue1", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 4.699999999999999);
+          tl.to("#esc09-superior-derecha-cue1", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 5.6);
+          tl.to("#esc09-superior-derecha-cue1", { autoAlpha: 0.32, duration: 0.3, ease: "power2.in" }, 8.4);
+          tl.fromTo("#esc09-superior-derecha-cue2", { autoAlpha: 0, x: -20 }, { autoAlpha: 0.32, x: 0, duration: 0.4, ease: "power2.out" }, 7.5);
+          tl.to("#esc09-superior-derecha-cue2", { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 8.4);
 
           window.__timelines["esc09-superior-derecha"] = tl;
         })();
