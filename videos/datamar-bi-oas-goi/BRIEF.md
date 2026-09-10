@@ -46,6 +46,11 @@ del contenido; este proyecto no inventa pasos ni afirma nada que el guion no dig
   El texto listo para sintetizar está en `NARRACION.md` y en `narracion-ssml/`.
   El video se construye primero con las duraciones estimadas del guion y se
   re-sincroniza contra el audio real cuando llegue.
+- **Dos versiones de audio.** El proyecto produce una versión por voz: la de
+  Camila y una segunda grabación que aportará la usuaria. Cada voz vive en su
+  carpeta (`assets/audio/<voz>/esc00…esc11`) y se arma con
+  `python3 tools/sincronizar.py --voz <voz>`. Como cada voz tiene su propio
+  ritmo, las duraciones finales difieren entre versiones.
 - **Subtítulos** en la franja inferior, sincronizados con la narración.
 - **Cursor animado** en la escena 4, donde el guion pide mostrar el clic sobre el reporte.
 - **Resaltado secuencial** de los filtros en la escena 5 y de los formatos de
@@ -67,3 +72,9 @@ del contenido; este proyecto no inventa pasos ni afirma nada que el guion no dig
   2:30 y la narración pura mide ~1:52. Se trabaja con 2:28 y se ajusta al audio real.
 - La URL `oasgoi.bcrp.gob:9502/analytics/` es un host interno; aparece tal cual
   porque es lo que el usuario debe escribir.
+- **Nombre de usuario difuminado.** Las capturas de las escenas 9 y 10 mostraban
+  «Conectado como Mitma Arango, Sandy» en la barra de OAS. A pedido de la usuaria
+  esa región se pixeló de forma irreversible (mosaico de 5 px más desenfoque) en
+  `escena09_exportar_excel_pagina.png` y `escena10_regresar_overview.png`. El
+  texto «Conectado como» se conserva para que la barra siga leyéndose natural.
+  Aviso: las versiones sin difuminar quedaron en el commit 944987f del historial.

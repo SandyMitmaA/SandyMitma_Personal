@@ -1,15 +1,21 @@
 #!/usr/bin/env python3
-"""Ensambla el timeline maestro y lo sincroniza con la narración real.
+"""Ensambla el timeline maestro y lo sincroniza con una narración concreta.
 
 Uso:
-    python3 tools/sincronizar.py
+    python3 tools/sincronizar.py                # sin voz: tiempos estimados
+    python3 tools/sincronizar.py --voz camila   # usa assets/audio/camila/
+    python3 tools/sincronizar.py --listar       # qué voces hay disponibles
 
-Si existen los archivos `assets/audio/esc00.wav` … `esc11.wav`, mide su duración
-real y ajusta cada escena a la voz. Si no existen, usa la estimación por conteo
-de palabras (148 palabras/min) para poder trabajar antes de tener el audio.
+Cada voz vive en su propia carpeta con doce archivos, `esc00` … `esc11`, en wav,
+mp3, m4a, aac u ogg. El script mide la duración real de cada uno y ajusta a esa
+voz las doce escenas y los subtítulos; sin audio cae en la estimación por conteo
+de palabras (148 palabras/min), útil para trabajar antes de tener la grabación.
 
-En ambos casos reescribe `index.html` y `subtitulos.json`.
+Reescribe `index.html` y `subtitulos.json`. Como cada voz tiene su propio ritmo,
+las dos versiones tienen duraciones distintas: renderiza una, guarda el MP4 con
+su nombre, y vuelve a correr el script con la otra voz.
 """
+import argparse
 import contextlib
 import json
 import os
@@ -18,7 +24,8 @@ import sys
 import wave
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-AUDIO_DIR = os.path.join(ROOT, "assets", "audio")
+AUDIO_BASE = os.path.join(ROOT, "assets", "audio")
+EXTS = (".wav", ".mp3", ".m4a", ".aac", ".ogg")
 
 LEAD = 0.6        # silencio antes de que entre la voz en cada escena
 TAIL = 1.2        # aire después de la última palabra, para que la escena respire
@@ -102,9 +109,26 @@ SCENES = [
 ]
 
 
-def find_audio(slug):
-    for ext in (".wav", ".mp3", ".m4a", ".aac", ".ogg"):
-        p = os.path.join(AUDIO_DIR, slug + ext)
+def voces_disponibles():
+    """Carpetas bajo assets/audio/ que contienen al menos un esc**.* reconocible."""
+    if not os.path.isdir(AUDIO_BASE):
+        return []
+    out = []
+    for nombre in sorted(os.listdir(AUDIO_BASE)):
+        d = os.path.join(AUDIO_BASE, nombre)
+        if os.path.isdir(d) and any(
+            f.startswith("esc") and f.endswith(EXTS) for f in os.listdir(d)
+        ):
+            n = sum(1 for f in os.listdir(d) if f.startswith("esc") and f.endswith(EXTS))
+            out.append((nombre, n))
+    return out
+
+
+def find_audio(slug, voz):
+    if not voz:
+        return None
+    for ext in EXTS:
+        p = os.path.join(AUDIO_BASE, voz, slug + ext)
         if os.path.isfile(p):
             return p
     return None
@@ -132,10 +156,10 @@ def audio_duration(path):
     raise RuntimeError(f"No se pudo medir la duración de {path}")
 
 
-def build():
+def build(voz=None):
     tracks, have_audio = [], False
     for slug, cid, src, lines in SCENES:
-        path = find_audio(slug)
+        path = find_audio(slug, voz)
         if path:
             have_audio = True
             speech = audio_duration(path)
@@ -289,13 +313,44 @@ def build():
         print(f"{tr['cid']:<24}{starts[i]:>9.1f}{tr['speech']:>8.1f}{tr['dur']:>9.1f}   {tr['source']}")
     m, s = divmod(total, 60)
     print(f"\nTotal: {total:.1f} s = {int(m)}:{int(s):02d}   ·   {len(index)} subtítulos")
+    faltan = [t["slug"] for t in tracks if not t["audio"]]
     if have_audio:
-        print("Narración real detectada: los tiempos siguen a la voz.")
+        print(f"Voz «{voz}»: los tiempos siguen a la grabación.")
+        if faltan:
+            print(f"  ⚠ sin audio y por tanto estimadas: {', '.join(faltan)}")
     else:
-        print(f"Sin audio en {os.path.relpath(AUDIO_DIR, ROOT)}/ — tiempos estimados.")
-        print("Coloca esc00.wav … esc11.wav y vuelve a ejecutar para sincronizar.")
+        destino = os.path.join("assets", "audio", voz or "<voz>")
+        print(f"Sin audio en {destino}/ — tiempos estimados.")
+        print("Coloca esc00.wav … esc11.wav en esa carpeta y vuelve a ejecutar.")
     return 0
 
 
+def main():
+    ap = argparse.ArgumentParser(description="Sincroniza el video con una narración.")
+    ap.add_argument("--voz", help="carpeta bajo assets/audio/ con los doce archivos")
+    ap.add_argument("--listar", action="store_true", help="lista las voces disponibles")
+    a = ap.parse_args()
+
+    disponibles = voces_disponibles()
+    if a.listar:
+        if not disponibles:
+            print("No hay ninguna voz en assets/audio/.")
+            print("Crea una carpeta por versión, p. ej. assets/audio/camila/, con esc00…esc11.")
+        else:
+            print("Voces disponibles:")
+            for nombre, n in disponibles:
+                marca = "" if n == 12 else f"  ⚠ faltan {12 - n}"
+                print(f"  {nombre:<20} {n}/12 archivos{marca}")
+        return 0
+
+    if a.voz and a.voz not in [n for n, _ in disponibles]:
+        print(f"No encuentro la voz «{a.voz}» en assets/audio/.")
+        if disponibles:
+            print("Disponibles: " + ", ".join(n for n, _ in disponibles))
+        return 1
+
+    return build(a.voz)
+
+
 if __name__ == "__main__":
-    sys.exit(build())
+    sys.exit(main())
