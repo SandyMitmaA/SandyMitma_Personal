@@ -105,8 +105,8 @@ que ya las corrige:
 
 | Sigla | Cómo debe sonar |
 |---|---|
-| OAS | «o-a-ese» (deletreada) |
-| BI | «bi-ai» o «be-i» — escucha cuál prefieres, ambas se usan |
+| OAS | «o-as» (deletreada) |
+| BI | «bi-ai» |
 | CSV | «ce-ese-uve» (deletreada) |
 | XML | «equis-eme-ele» (deletreada) |
 | PDF | «pe-de-efe» (deletreada) |
