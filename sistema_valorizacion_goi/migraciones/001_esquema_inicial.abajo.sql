@@ -1,0 +1,15 @@
+DROP VIEW IF EXISTS valorizacion_vigente;
+DROP TABLE IF EXISTS carga;
+DROP TABLE IF EXISTS periodo_cerrado;
+DROP TABLE IF EXISTS fecha_desactualizada;
+DROP TABLE IF EXISTS bitacora;
+DROP TABLE IF EXISTS reexpresion;
+DROP TABLE IF EXISTS reproceso;
+DROP TABLE IF EXISTS valorizacion;
+DROP TABLE IF EXISTS version_calculo;
+DROP TABLE IF EXISTS calendario_cupon;
+DROP TABLE IF EXISTS precio;
+DROP TABLE IF EXISTS posicion;
+DROP TABLE IF EXISTS instrumento;
+DROP TABLE IF EXISTS parametro;
+DROP TABLE IF EXISTS portafolio;
