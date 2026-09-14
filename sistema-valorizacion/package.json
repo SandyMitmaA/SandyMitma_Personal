@@ -1,0 +1,12 @@
+{
+  "name": "sistema-valorizacion-renta-fija",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sistema web de valorización diaria de portafolios de renta fija (Fase 1), con BMV/EMV listos para el cálculo de TWRR en la Fase 2.",
+  "type": "module",
+  "scripts": {
+    "start": "node herramientas/servidor.mjs",
+    "test": "node --test \"pruebas/*.test.mjs\""
+  },
+  "engines": { "node": ">=18" }
+}

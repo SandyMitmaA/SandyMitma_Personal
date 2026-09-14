@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sistema de Valorización de Portafolios de Renta Fija</title>
+  <link rel="stylesheet" href="app.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+</head>
+<body>
+  <header class="cabecera">
+    <div class="marca">
+      <span class="marca-icono" aria-hidden="true">◧</span>
+      <div>
+        <strong>Valorización de Portafolios de Renta Fija</strong>
+        <span class="marca-fase">Fase 1 — Valorización diaria · BMV/EMV listos para TWRR</span>
+      </div>
+    </div>
+    <nav id="navegacion" class="navegacion" aria-label="Pantallas del sistema"></nav>
+  </header>
+  <main id="contenido" class="contenido"></main>
+  <footer class="pie">
+    <p>Arquitectura en 3 capas: <strong>inputs</strong> (maestro, calendario, operaciones, precios, FX) → <strong>motor</strong> (posición vigente, accrued, SMV, TMV, BMV/EMV, caja) → <strong>reportes</strong>. La posición vigente nunca se carga a mano y la Versión A es la única fuente de retornos oficiales.</p>
+  </footer>
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>
