@@ -12,17 +12,34 @@ calendario por su cuenta.
 
 ## Cómo ejecutarlo
 
+El sistema no necesita instalarse ni compilarse: es HTML con módulos ES nativos.
+Lo único que hace falta es **servirlo por `http://`**, porque el navegador
+bloquea los módulos ES abiertos con doble clic sobre el archivo (`file://`).
+Cualquier servidor estático sirve.
+
+**Opción 1 — doble clic (la más simple).** `abrir-windows.bat` en Windows,
+`abrir-mac-linux.sh` en macOS o Linux. Levanta el servidor, abre el navegador y
+usa Node si está instalado o Python si no.
+
+**Opción 2 — por consola.** Abrir una terminal en esta carpeta y correr:
+
 ```bash
-cd sistema-valorizacion
-npm start            # http://localhost:8123
-npm test             # 21 pruebas del motor
+npm start                     # con Node: http://localhost:8123
+python -m http.server 8123    # alternativa sin Node, mismo resultado
 ```
 
-No hay dependencias, ni compilación, ni instalación: solo Node 18+ para servir
-los archivos y correr las pruebas. El sistema es HTML + módulos ES nativos.
+En Windows, para abrir la terminal en la carpeta: escribir `cmd` en la barra de
+direcciones del Explorador de archivos y presionar Enter.
 
-> Debe abrirse por `http://localhost`, no con doble clic sobre `index.html`: el
-> navegador bloquea los módulos ES cargados desde `file://`.
+**Opción 3 — sin instalar nada.** Abrir la carpeta en VS Code e instalar la
+extensión *Live Server*; luego clic derecho sobre `index.html` → *Open with Live
+Server*.
+
+Para correr las pruebas del motor sí hace falta Node 18 o superior:
+
+```bash
+npm test     # 21 pruebas
+```
 
 La primera vez que se abre, el sistema siembra un **portafolio de ejemplo**
 (4 instrumentos en dólares, con un cupón y una amortización dentro de la
@@ -169,6 +186,8 @@ Valorización.
 ```
 sistema-valorizacion/
 ├── index.html, app.css          Shell y estilos
+├── abrir-windows.bat            Lanzadores de doble clic
+├── abrir-mac-linux.sh
 ├── src/
 │   ├── app.js                   Navegación entre frames
 │   ├── core/                    MOTOR (puro, sin DOM)
