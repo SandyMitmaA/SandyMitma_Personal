@@ -274,6 +274,16 @@ REST versionada bajo `/api/v1`. El usuario se identifica con la cabecera
 
 ---
 
+## Documentación funcional
+
+`docs/DOCUMENTACION.md` describe todo lo que hace el sistema: metodología de
+cálculo paso a paso, reglas de operación de los tres frames, las ocho pantallas,
+el panel de validaciones, los parámetros, el modelo de datos, la API y el
+glosario. Este README cubre la puesta en marcha y las decisiones de ingeniería;
+aquella cubre el comportamiento.
+
+---
+
 ## Atajos de teclado
 
 `Alt+1` a `Alt+8` saltan a cada módulo en el orden de la navegación lateral. En
