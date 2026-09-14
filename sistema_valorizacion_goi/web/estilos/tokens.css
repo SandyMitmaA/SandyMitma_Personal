@@ -1,0 +1,32 @@
+/* Tokens de diseno. Seccion 12.1.
+   Ningun hexadecimal se escribe fuera de este archivo. El color codifica
+   informacion, nunca decora. */
+:root {
+  --navy-900: #0B2545;
+  --navy-700: #13315C;
+  --blue-600: #1B4F8C;
+  --blue-400: #3E7CB1;
+  --blue-100: #DCE6F0;
+  --blue-050: #EEF3F8;
+  --panel:    #FFFFFF;
+  --rule:     #D3DCE5;
+  --ink:      #10202F;
+  --ink-muted:#5B6D7E;
+
+  /* Semanticos. Reservados exclusivamente para estado. */
+  --ok:    #1B7A54;
+  --warn:  #B0710F;
+  --alert: #A32020;
+
+  --ok-fondo:    #E6F2ED;
+  --warn-fondo:  #FBF0DC;
+  --alert-fondo: #F6E3E3;
+
+  --fuente: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+            Arial, sans-serif;
+  --fuente-cifras: var(--fuente);
+
+  --alto-barra: 46px;
+  --ancho-nav: 208px;
+  --radio: 2px;
+}

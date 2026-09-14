@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sistema de Valorizacion Interno - GOI</title>
+  <link rel="stylesheet" href="/estilos/tokens.css">
+  <link rel="stylesheet" href="/estilos/app.css">
+</head>
+<body>
+  <header class="barra">
+    <span class="marca">Sistema de Valorizacion Interno &middot; GOI</span>
+    <span class="campo"><label>Portafolio</label><span id="bs-portafolio">-</span></span>
+    <span class="campo"><label>Fecha de valorizacion</label>
+      <input type="date" id="bs-fecha"></span>
+    <span class="campo"><label>Base</label><span id="bs-moneda">-</span></span>
+    <span class="derecha">
+      <span class="campo"><label>Usuario</label><input id="bs-usuario" size="12"></span>
+    </span>
+  </header>
+
+  <nav class="nav" id="nav"></nav>
+  <main id="vista"><div class="vacio">Cargando...</div></main>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
