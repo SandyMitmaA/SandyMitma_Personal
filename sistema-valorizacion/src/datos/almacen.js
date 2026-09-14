@@ -64,10 +64,17 @@ function notificar() {
   for (const fn of suscriptores) fn(datos);
 }
 
+/**
+ * Devuelve además si ya había un documento guardado. La diferencia importa:
+ * «nunca se abrió el sistema» habilita sembrar el ejemplo, mientras que «el
+ * usuario borró todo» debe respetarse y dejar el almacén vacío.
+ */
 export function cargar() {
+  let existia = false;
   try {
     const crudo = almacenamiento.getItem(CLAVE_ALMACEN);
     if (crudo) {
+      existia = true;
       const leido = JSON.parse(crudo);
       datos = { ...vacio(), ...leido, config: { ...CONFIG_POR_DEFECTO, ...(leido.config || {}) } };
     }
@@ -75,7 +82,7 @@ export function cargar() {
     console.warn('No se pudo leer el almacén; se empieza vacío.', e);
     datos = vacio();
   }
-  return datos;
+  return { datos, existia };
 }
 
 export function guardar() {

@@ -22,25 +22,47 @@
   --mono: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
 }
 
+/* Tema oscuro: se declara dos veces a propósito. La consulta de medios cubre la
+   preferencia del sistema y el atributo data-theme cubre el visor que fuerza un
+   tema explícito; el :not() evita que el sistema gane sobre esa elección. */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --fondo: #11151c;
-    --superficie: #1a1f28;
-    --superficie-2: #222935;
-    --borde: #303845;
-    --borde-suave: #262e3a;
-    --texto: #e7ebf2;
-    --texto-tenue: #9aa6ba;
-    --acento: #7db6e8;
-    --acento-suave: #1c2c3d;
-    --ok: #5fce9f;
-    --ok-suave: #16302a;
-    --aviso: #e8bd6d;
-    --aviso-suave: #33291a;
-    --error: #f08a8a;
-    --error-suave: #35201f;
-    --sombra: 0 1px 3px rgba(0, 0, 0, .4);
+  :root:not([data-theme="light"]) {
+  --fondo: #11151c;
+  --superficie: #1a1f28;
+  --superficie-2: #222935;
+  --borde: #303845;
+  --borde-suave: #262e3a;
+  --texto: #e7ebf2;
+  --texto-tenue: #9aa6ba;
+  --acento: #7db6e8;
+  --acento-suave: #1c2c3d;
+  --ok: #5fce9f;
+  --ok-suave: #16302a;
+  --aviso: #e8bd6d;
+  --aviso-suave: #33291a;
+  --error: #f08a8a;
+  --error-suave: #35201f;
+  --sombra: 0 1px 3px rgba(0, 0, 0, .4);
   }
+}
+
+:root[data-theme="dark"] {
+  --fondo: #11151c;
+  --superficie: #1a1f28;
+  --superficie-2: #222935;
+  --borde: #303845;
+  --borde-suave: #262e3a;
+  --texto: #e7ebf2;
+  --texto-tenue: #9aa6ba;
+  --acento: #7db6e8;
+  --acento-suave: #1c2c3d;
+  --ok: #5fce9f;
+  --ok-suave: #16302a;
+  --aviso: #e8bd6d;
+  --aviso-suave: #33291a;
+  --error: #f08a8a;
+  --error-suave: #35201f;
+  --sombra: 0 1px 3px rgba(0, 0, 0, .4);
 }
 
 * { box-sizing: border-box; }

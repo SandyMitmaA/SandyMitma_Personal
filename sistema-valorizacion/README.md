@@ -24,9 +24,12 @@ los archivos y correr las pruebas. El sistema es HTML + módulos ES nativos.
 > Debe abrirse por `http://localhost`, no con doble clic sobre `index.html`: el
 > navegador bloquea los módulos ES cargados desde `file://`.
 
-Para verlo funcionando de inmediato: **Configuración → Cargar portafolio de
-demostración** (4 instrumentos en dólares, con un cupón y una amortización
-dentro de la ventana, 1 al 14 de setiembre de 2026).
+La primera vez que se abre, el sistema siembra un **portafolio de ejemplo**
+(4 instrumentos en dólares, con un cupón y una amortización dentro de la
+ventana, 1 al 14 de setiembre de 2026) para que se pueda recorrer de inmediato.
+Al cargar datos reales, bórrelo desde **Configuración → Borrar todo**; una vez
+borrado no se vuelve a sembrar. También se puede recargar cuando se quiera desde
+**Configuración → Cargar portafolio de demostración**.
 
 Los datos se guardan en el `localStorage` del navegador. Exporte el respaldo
 JSON desde Configuración antes de cambiar de equipo o limpiar el navegador.
@@ -180,8 +183,19 @@ sistema-valorizacion/
 │   │   └── csv.js               Importación/exportación
 │   └── ui/                      REPORTES (los 5 frames)
 ├── pruebas/motor.test.mjs       21 pruebas del motor
-└── herramientas/servidor.mjs    Servidor estático sin dependencias
+└── herramientas/
+    ├── servidor.mjs             Servidor estático sin dependencias
+    └── construir-artefacto.mjs  Deriva de index.html la página para publicar
 ```
+
+## Publicar como página web
+
+`node herramientas/construir-artefacto.mjs <destino.html>` deriva de `index.html`
+la variante que esperan los visores que aportan su propio `<!doctype>`/`<head>`
+(la página publicada no puede traer esas etiquetas). Se genera en vez de
+mantenerse a mano para que no existan dos plantillas que se desincronicen; hay
+que publicarla junto con `app.css` y el árbol `src/` en sus mismas rutas
+relativas.
 
 ## Escalamiento
 

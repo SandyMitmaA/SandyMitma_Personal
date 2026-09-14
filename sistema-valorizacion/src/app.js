@@ -1,7 +1,8 @@
 // Shell de la aplicación: navegación entre frames y arranque.
 
 import * as store from './datos/almacen.js';
-import { el } from './ui/comunes.js';
+import { datosDemo } from './datos/demo.js';
+import { aviso, el } from './ui/comunes.js';
 import * as frameInstrumentos from './ui/frame-instrumentos.js';
 import * as frameOperaciones from './ui/frame-operaciones.js';
 import * as framePrecios from './ui/frame-precios.js';
@@ -15,6 +16,8 @@ const FRAMES = [
   { id: 'precios', titulo: 'Precios y FX', capa: 'Inputs', modulo: framePrecios },
   { id: 'config', titulo: 'Configuración', capa: 'Gobierno', modulo: frameConfig },
 ];
+
+let primerArranque = false;
 
 const contenido = document.getElementById('contenido');
 const navegacion = document.getElementById('navegacion');
@@ -46,10 +49,21 @@ function pintar() {
         el('pre', { clase: 'traza' }, `${error.message}\n\n${error.stack || ''}`),
         el('p', { clase: 'nota nota-info' }, 'Los datos cargados no se perdieron. Si el error persiste, exporte el respaldo desde Configuración y revise la consola del navegador.')));
   }
+  if (primerArranque) {
+    primerArranque = false;
+    aviso('Se cargó un portafolio de ejemplo para que pueda recorrer el sistema. Bórrelo desde Configuración cuando cargue sus datos reales.');
+  }
   window.scrollTo({ top: 0, behavior: 'instant' });
 }
 
-store.cargar();
+const { existia } = store.cargar();
+if (!existia) {
+  // Primera visita: se siembra el portafolio de ejemplo para que el sistema se
+  // pueda recorrer de inmediato. Si el usuario borra todo, el documento vacío
+  // queda guardado y no se vuelve a sembrar.
+  store.reemplazar(datosDemo());
+  primerArranque = true;
+}
 store.suscribir(() => { /* el guardado es automático; cada frame decide cuándo repintar */ });
 window.addEventListener('hashchange', pintar);
 pintar();

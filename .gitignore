@@ -11,3 +11,6 @@ videos/*/node_modules/
 # (partir-audio.py, pulir-audio.py, preparar-cama.py). No versionar decenas de MB
 # que salen de un comando.
 videos/*/assets/audio/*/
+
+# Paquete distribuible del sistema de valorización: se regenera con zip -r
+sistema-valorizacion.zip
