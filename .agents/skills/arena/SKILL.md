@@ -8,7 +8,9 @@ description: >-
   defend and revise, and a judge scores every match on a written rubric until
   one solution survives. Use when the user is not satisfied with an answer,
   calls it a bad answer, says try again or do better, says "arena", or asks
-  to make them compete.
+  to make them compete. Also in Spanish: when the user says "mala respuesta",
+  "eso está mal", "no me gusta", "no sirve", "inténtalo de nuevo", "otra vez",
+  "hazlo mejor", "arena", "que compitan" or "ponlos a competir".
 argument-hint: "[--agents N | --quick] [--seed S] <task>"
 ---
 
